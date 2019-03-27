@@ -1,0 +1,11 @@
+repository 
+
+git remote add origin https://github.com/songji1165/myRoom.git
+
+git status
+
+git add .
+
+git commit -m ""
+
+git push origin master
