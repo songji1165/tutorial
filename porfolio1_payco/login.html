@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/index_header_footer.css">
+	<link rel="stylesheet" href="css/login.css">
+	
+</head>
+<body>
+<div id="wrapper">
+<div id="wrap">
+	<h1><a href="index.html" title="payco 홈페이지로 이동"></a></h1>
+	<h2>하나의 아이디로 쇼핑부터 혜택까지!</h2>
+	<form action="login.php" id="login" onsubmit="return checking()">
+		<fieldset>
+			<input type="text" placeholder="페이코 아이디(이메일 또는 휴대폰)" class="vali">
+			<p class="check1">아이디를 확인해주세요.</p>
+			<input type="password" placeholder="페이코 비밀번호" class="vali">
+			<p class="check1">비밀번호를 확인해주세요.</p>
+			<div class="checkwrap">
+			<div>
+			<input type="checkbox" id="check" name="check" class="skip">
+			<label for="check" class="ch">로그인 상태 유지</label>
+                </div>
+			<p>
+			<a href="#" id="modal">IP 보안</a>
+			<input type="checkbox" id="on" name="ip" class="skip">
+			<label for="on" class="on"></label>
+				</p>
+			</div>
+			<button type="submit" class="submit" >로그인</button>
+			<p class="or">또는</p>
+			<button class="applogin">앱으로 로그인</button>
+		</fieldset>
+	</form>
+	<div id="pop">
+	<div class="inpopwrap">
+	<div class="inpop">
+		<div class="top">
+		<h1>
+			IP 보안이란
+		</h1>
+			타인이 로그인 권한을 가로채어 부정하게 사용하는 것을 방지하기 위하여 사용자의 IP 주소 정보를 이용하여 개인 정보를 보호하기 위한 보안 서비스입니다.
+		</div>
+		<div class="bottom">
+			<div>
+			<p class="popon"></p>
+				IP 보안을 [ON]으로 설정하시면 사용자의 인증이 필요한 서비스 접속 시, 정상적으로 로그인한 IP와 서비스 사용 중 접속한 IP 정보가 일치하지 않을 경우 안전한 서비스 이용을 위하여 로그아웃하게 됩니다.
+			</div>
+			<div>
+			<p class="popoff"></p>
+				로그인 상태에서 IP 주소가 자주 변경되는 사용자의 경우 IP 보안을 [OFF]로 설정하셔야 정상적으로 서비스를 이용할 수 있습니다. IP 보안 설정을 하지 않은 상태에서는 보안이 취약할 수 있습니다.
+			</div>
+		</div>
+			<button id="close">확인</button>
+		</div>
+	</div>
+	</div>
+	<ul>
+		<li><a href="#">아이디찾기</a></li>
+		<li><a href="#">비밀번호찾기</a></li>
+		<li><a href="#">회원가입</a></li>
+	</ul>
+    </div>
+	</div>
+   <script src="js/login.js"></script>
+    
+</body>
+</html>
