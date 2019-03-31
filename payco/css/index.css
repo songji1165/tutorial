@@ -1,18 +1,18 @@
 @charset "utf-8";
 @import url(index_header_footer.css);
 
-#mainwrap{
+.container{
     width: 100%
 }
-#mainwrap >div{
+.container >div{
     height: 100vh
 }
-#mainwrap > div >div{
+.container > div >div{
     padding-top: 110px;
 }
 
 /*        main1           */
-#main1{
+.payco_app{
     background: url(../images/payco_background1.jpg) no-repeat 55% bottom;
     background-attachment: fixed;
     background-size: cover;
@@ -20,7 +20,7 @@
     display: table;
     width: 100%;
 }
-#main1Wrap{
+.appWrap{
     padding: 0!important;
     width: 80%;
     height: 100%;
@@ -28,18 +28,18 @@
     display: table-cell;
     vertical-align: middle
 }
-#main1Wrap > div{
+.appWrap > div{
 /*    width: 50%;*/
     text-align: center;
     float:right
 }
 
-.main1Title{
+.appTitle{
     letter-spacing: 0.8em;
     line-height: 2em;
-    font-size: 2.5rem;
+    font-size: 2.5em;
     color: #fff;
-    padding-top:10%;
+    padding-top:5rem;
     text-shadow: 2px 2px 5px rgba(51, 51, 51, 0.5);
     white-space: nowrap;
 }
@@ -54,19 +54,11 @@
      color: #fff;
     font-weight: 800
 }
-#main1Wrap b{
+.appWrap b{
     font-weight:800;
     color:#fa2828;
     letter-spacing: 0.4em;
     font-size: 1.3em;
-}
-.apptext{
-    letter-spacing: 0.3em;
-    font-size: 1.5em;
-    font-weight: normal;
-    line-height: 1.8em;
-    white-space: nowrap;
-    margin-bottom: 10%;
 }
 .app p{
     width: 280px;
@@ -164,7 +156,7 @@
 .textBoxWrap p:last-of-type{
     margin-top: 20%;
     text-align: right;
-    white-space: nowrap
+    /* white-space: nowrap */
 }
 .textBoxWrap i{
     color: #fff;
@@ -228,37 +220,37 @@ p.effect img{
 
 
 /*        main5          */
-#main5{
+.payco_evt{
     background: url(../images/div5_bg.jpg) no-repeat center bottom;
     background-size: cover;
     position: relative;
     display: table;
     width: 100%
 }
-#main5veritcal{
+.veritcalWrap{
     display: table-cell;
     vertical-align: middle;
 }
 
-#main5Wrap{
+.payco_evtWrap{
     text-align: center;
     
 }
 
-#main5 h1{
+.payco_evt h3{
     text-align: center;
     font-size: 2.2em;
     margin-bottom: 10px
 }
 
-#slideWrap{
+.slideWrap{
    
-    width: 70%;
+    width: 90%;
     margin: 5% auto;
-    height: 435px;
+    /* height: 435px; */
     position: relative
 }
-#slideWrap > p{
+.slideWrap > p{
     position: absolute;
     top: 50%;
     left: 10px;
@@ -266,38 +258,38 @@ p.effect img{
     transform: translateY(-50%);
     z-index: 10;
 }
-#slideWrap > p .btn_pre{
+.btn_pre{
     float: left;
 }
-#slideWrap > p .btn_next{
+.btn_next{
     float: right;
 }
-#slideWrap > p:after{
+.slideWrap > p:after{
     content: '';
     display: block;
     clear: both
 }
-#slideWrap > p img{
+.slideWrap > p img{
     width: 50px;
     height: 80px;
     cursor: pointer;
     opacity: 0.2
 }
-#slideWrap > p img:hover{
+.slideWrap > p img:hover{
     opacity: 0.5;}
 
-#slider .slides > div{
+.slides > div{
     float: left;
 }
-#slider .slides:after{
+.slides:after{
     content: '';
     display: block;
     clear: both
 }
 
-#slider{
+.slider{
     position: relative;
-    width:765px;
+    width:65%;
     height: 440px;
     margin: 0 auto;
     overflow: hidden;
@@ -306,7 +298,7 @@ p.effect img{
 .slides{
     position: absolute;
     left: 0;
-    height:  440px;
+    /* height:  440px; */
     width: 2200px;
     transition: .3s
 }
@@ -351,11 +343,11 @@ p.effect img{
     width: 100%;
     height: 100%;
 }
-#slider .eventCupon dt{
+.slider .eventCupon dt{
     width: 100%;
     height: 100%
 }
-#slider .eventCupon dd{
+.slider .eventCupon dd{
     display: hidden;
     height: 0;
     width: 0;
@@ -370,35 +362,33 @@ p.effect img{
 
 
 /*            main6       */
-#main6{
+.payco_partner{
     height: 100vh;
     background: #d4d4d4;
     display: table;
     margin: 0 auto
 }
-#main6wrap{
+.partnerWrap{
     display: table-cell;
     vertical-align: middle;
     text-align: center;
-   
-/*    transform: translate(-50%, -50%);*/
     width: 80%;
-    margin: 0 auto!important;
-    padding: 5% 0 !important;
+    margin: 0 auto;
+    padding: 5% 0;
     text-align: center;
     background: #fff
 }
-#main6 h1{
+.payco_partner h3{
     text-align: center;
     font-size: 2.2em;
     margin-bottom: 30px
 }
-#main6 b{
+.payco_partner b{
     font-size:1.1em;
     color: #fa2828
 }
 
-#main6 ul{
+.payco_partner ul{
     max-width:730px;
     min-width: 600px;
     height: 50%;
@@ -407,25 +397,27 @@ p.effect img{
     text-align: center;
     overflow: hidden;
 }
-#main6 ul:after{
+.payco_partner ul:after{
     content: '';
     display: block;
     clear: both;
 }
-#main6 ul li{
+.payco_partner ul li{
    float: left;
     width: 180px;
     height: 100px;
-    background: url(../images/link1.png) no-repeat center;
+    background-image: url(../images/link1.png);
+    background-repeat: no-repeat;
+    background-position:  center;
     background-size: contain;
 }
-#main6 ul li a{
+.payco_partner ul li a{
     display: inline-block;
     width: 100%;
     height: 80%;
     margin-top: 10%;
 }
-#main6 button{
+.payco_partner button{
     border: none;
     background: #32312f;
     color: #fff;
@@ -434,7 +426,7 @@ p.effect img{
     border-radius: 5px; 
     cursor: pointer;
 }
-#main6 button:first-of-type{
+.payco_partner button:first-of-type{
     background: #fa2828;
     margin-right: 30px
 }
@@ -444,43 +436,43 @@ p.effect img{
 
 
 /*		main7 		*/
-#main7{
+.payco_cs{
 	width: 100%;
 	height: auto !important ;
 	background: #d4d4d4;
 	padding: 0 !impotant
 }
-#main7Wrap{
+.csWrap{
 	width: 80%;
 	margin: 0 auto 0 auto;
 	padding: 0 !important
 }
-#main7Wrap:after{
-	content: '';
-	display: block;
-	clear: both;
-}
-#main7Wrap div{
-	float: left;
+.csWrap div{
+    float: left;
 	padding: 5% ;
 	position: relative;
+}
+.csWrap:after{
+    content: '';
+    display: block;
+    clear: both;
 }
 .leftWrap{
 	width: 70%;
 	position: relative
 }
 .leftWrap .leftmain7{
-	position: absolute;
+	/* position: absolute; */
 	top: 50%;
 	left:50%;
 	transform: translateX(-50%);
 }
 .rightWrap{
 	width: 30%;
-	margin:2% 0;
+	margin:5% 0;
 	padding-left: 0!important;
 }
-#main7Wrap h1{
+.csWrap h1{
 	font-size: 2.2em;
 	margin-bottom: 20px;
 }
@@ -545,20 +537,24 @@ p.effect img{
 
 
 
-@media only screen and (max-device-width:700px){
-    #mainwrap > div:not(:last-of-type){
+@media (max-width:700px){
+    .container > div:not(:last-of-type){
         min-height: 100vh;
         max-height: 100%;
         width: 100%;
     }
-    #main1{
+    .app{
         background-position:center bottom;
         background-size:100% 100%;
+        padding: 0;
     }
-	#main1Wrap{
+    .appTitle{
+        font-size: 2em
+    }
+	.appWrap{
 		width: 100%;
 	}
-    #main1Wrap > div{
+    .appWrap > div{
         float: none
     }
     .box > div{
@@ -577,44 +573,15 @@ p.effect img{
         left: 0;
         width: 100%;
     }
-    #main3 .imgBox{
-        position: absolute;
-        top:0;
-        left: 0
-    }
 	.textBox img{
 		width: 80px;
 	}
     .textBox .textBoxWrap{
-        top: 0;
-        left: 5%;
-        transform: none;
-/*        width: 100%;*/
-    }
-    
-    
-    #slider{
-        width: 245px;
-    }
-    #slideWrap{
-        width: 90%
-    }
-    
-    #main6 ul{
-        max-width: 100%;
-        min-width: 100%;
-    }
-    #main6 ul li{
-        float:none;
-        display: inline-block;
-    }
-    
-    #main7Wrap{
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
         width: 100%;
-    }
-    
-    #main7Wrap div{
-        padding: 5% 1%;
+        padding: .5rem
     }
     .leftWrap{
         width: 68%;
@@ -622,11 +589,43 @@ p.effect img{
     .rightWrap{
         margin: 5% 0
     }
-   
-    #textBox p:nth-of-type(-n+2){
+    .textBox p{
+        margin:.3rem
+    }
+   .textBox p:nth-of-type(-n+2){
         margin-bottom: 5%;
     }
     .textBoxWrap p:last-of-type{
         margin-top: 5%;
+    } 
+    
+    
+    .slider{
+        width: 245px;
+    }
+    .slideWrap{
+        width:100%;
+        left: 0;
+    }
+    .slideWrap > p{
+        left: 0
+    }
+    .payco_partner ul{
+        max-width: 100%;
+        min-width: 100%;
+    }
+    .payco_partner ul li{
+        float:none;
+        display: inline-block;
+    }
+    
+    .csWrap{
+        width: 100%;
+    }
+    
+    .csWrap div{
+        float:none;
+        width: 100%;
+        text-align: center
     }
 }

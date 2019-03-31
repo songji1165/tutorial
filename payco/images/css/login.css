@@ -1,0 +1,255 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic:700,800&subset=korean');
+
+
+		*,body{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box
+		}
+		#wrapper{
+			
+			text-align: center;
+			position: fixed;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%)
+		}
+		#wrap{
+			max-width: 450px;
+			min-width: 320px;
+			margin:10% auto;
+		}
+		fieldset, button{
+			border: none;
+		}
+		#wrap > h1{
+			width:130px;
+			height: 50px;
+			overflow: hidden;
+			text-align: center;
+			margin: 0 auto;
+			background: red;
+			background: url(../images/logo.png) no-repeat center;
+			background-size:175%
+		}
+		#wrap >h1 a{
+			display: inline-block;
+			width: 100%;
+			height: 100%;
+		}
+		#wrap >h2{
+			font-size: 1.2em;
+            margin: 15px 0 30px 0
+		}
+		fieldset > input, button{
+			width: 70%;
+			height: 50px;
+			display: block;
+			margin: 20px auto 0 auto;
+			background: none
+		}
+		input{
+			border: 1px solid #d4d4d4;
+			padding-left: 10px;
+		}
+		.checkwrap{
+			width: 70%;
+			line-height: 20px;
+			margin: 10px auto 40px auto;
+			background: red !important
+		}
+		.ch{
+			float: left;
+			padding-left:25px;
+			line-height: 20px;
+			position: relative;
+            cursor: pointer
+		}
+		.ch:before{
+			content: '';
+			position: absolute;
+			top: 0;
+			left:0;
+			width: 15px;
+			height: 15px;
+			border: 1px solid #d4d4d4;
+		}
+		#check:checked + .ch:before{
+			content: '\2714';
+			color: #fff;
+			background: #fa2828;
+			font-size: 1.2rem;
+			text-align: center;
+			line-height: 18px;
+			padding-bottom: 3px;
+/*			font-weight: 800;*/
+			border-color: #fa2828
+		}
+		fieldset > div > p{
+			float: right;
+			width: 50%;
+			text-align: right
+		}
+		.on{
+			padding-right: 35px;
+			background: url(../images/onooff.jpg) no-repeat right -1px;
+			background-size: 30px;
+			cursor: pointer
+		}
+		#on:checked ~ .on{
+			background: url(../images/onooff.jpg) no-repeat right -17px;
+			background-size: 30px;
+		}
+		
+		.submit{
+			background: #fa2828;
+			color: #fff;
+            margin-top: 55px
+		}
+		.applogin{
+			border: 1px solid #fa2828;
+			color: #fa2828;
+			padding-left: 20px;
+			background: url(../images/APPlogin.jpg) no-repeat 30% 60%;
+			background-size: 40px
+		}
+		.or{
+/*			display: inline-block;*/
+			padding: 0 10px;
+			position: relative;
+			width: 70%;
+			margin:20px auto;
+			font-size: 10px;
+			color: #323221;
+			z-index: 3
+		}
+		.or:before{
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 1px;
+			background: #515151;
+			left: 0;
+			top: 50%;
+			z-index: -1
+		}
+		.or:after{
+			content: '';
+			position: absolute;
+			width: 50px;
+			height: 100%;
+			left: 50%;
+			margin-left: -25px;
+			top: 0;
+			background: #fff;
+			z-index: -1
+		}
+		ul{
+			display: inline-block;
+			text-align: center;
+			margin-top: 20px
+		}
+		ul li{
+			float: left;
+			color: #323221;
+			margin: 0 5px;
+/*			padding-left: 5px*/
+		}
+		ul li a{
+			font-size: 11px;
+			
+		}
+		ul li:not(:first-child) a:before{
+			content: '|';
+			margin-right: 10px
+			
+		}
+		#pop{
+			display: none;
+			z-index: 10;
+			position: fixed;
+			background:rgba(0, 0, 0, 0.49);
+			top: 0;
+			left: 0;
+			height: 100vh;
+            width: 100%;
+			text-align: center;
+		}
+        .openPop{
+			display: table !important;
+			height: 100%
+        }
+        
+		.inpopwrap{
+            display: table-cell;
+			vertical-align: middle;
+            margin: 0 auto;
+            width: 100%
+		}
+        .inpop{
+            vertical-align: middle;
+			width:400px;
+			background: #fff;
+            margin: 0 auto;
+            padding: 40px 30px 20px 30px;
+            text-align: justify;
+        }
+        .inpop div{
+            color:#515151;
+            margin-bottom: 20px
+        }
+        .inpop .top{
+            border-bottom: 1px solid #d4d4d4;
+            padding-bottom: 20px;
+            margin-bottom: 20px
+        }
+        .inpop h1{
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        .bottom > div p{
+            background: url(../images/onooff.jpg) no-repeat -4px -17px;
+            background-size: 30px;
+            padding-top:20px;
+        }
+        .bottom > div:nth-of-type(2) p{
+            background-position: -2px 3px;
+            margin-top: 10px
+        }
+        #pop .inpop button{
+            background: #fa2828;
+            color: #fff;
+            width: 100px;
+            height: 40px;
+            margin-top: 30px;
+        }
+        button{
+            cursor: pointer
+        }
+        
+        input{
+            font-size:1.2rem;
+        }
+        input[type="password"]{
+            
+            font-size:1.3rem
+        }
+        input::placeholder{
+            font-size: 0.8rem;
+            font-style: italic
+/*            color:#32312f*/
+        }
+        
+        .check1{
+            width: 70%;
+            margin: 5px auto 20px auto;
+            text-align: left;
+            padding-left: 10px;
+            font-size: 12px;
+            color: #fa2828;
+            display: none;
+        }
+        .submit{
+            margin-top: 0
+        }

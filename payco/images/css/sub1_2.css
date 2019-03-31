@@ -1,0 +1,267 @@
+@charset 'utf-8';
+
+
+#container > div {
+    width: 100%;
+    height: 100vh;
+    border-bottom: 2px solid #d4d4d4
+}
+
+
+.main1 {
+    background: url(../images/menu1_2/div1_bg.jpg) no-repeat center 0;
+    background-size: cover;
+    text-align: center;
+    padding-top: 120px;
+}
+.main1tit h1{
+    
+    margin-top: 7%;
+    font-size: 2.5rem;
+    line-height: 4rem;
+/*   animation: title 0.3s ease 1;*/
+}
+.main1 img{
+    display: none;
+}
+.main1tit h1 b{
+    display: inline-block;
+    font-size:3rem;
+    color: #fa2828;
+    font-weight: 800;
+    opacity: 0;
+    animation:title 0.4s 2 forwards;
+     animation-delay:.3s
+}
+.main1tit h1 b:last-of-type{
+    animation-delay: .6s
+}
+
+@keyframes title {
+   from{
+        opacity: 0;
+       transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-10px);
+        opacity: 1
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1
+    }
+}
+.main1tit p{
+    font-size:1.5rem;
+    margin-top: 20px;
+}
+
+#sticky{
+    position: relative;
+    position: -webkit-sticky;
+    position: sticky;
+/*    transform: translateY(-100px);*/
+    top: 0;
+    height: 100px!important;
+    width: 100%;
+    background:#fff;
+    height: 100px;
+    z-index: 500000;
+    text-align: center;
+    padding: 35px 0;
+    white-space: nowrap;
+    box-shadow: 0 1px 5px rgba(51, 51, 51, 0.5);
+}
+#sticky span:not(:first-of-type){
+    margin-left: 80px;
+    padding-left: 10px;
+    position: relative;
+}
+#sticky span:not(:first-of-type):after{
+    content: '';
+    position: absolute;
+    top:-15px;
+    left: -45px;
+    background: url(../images/nextstage.png) no-repeat 0 0;
+    background-size:20px 40px;
+    width: 20px;
+    height: 50px;
+}
+#sticky span a{
+    font-size: 1.5rem
+}
+
+.now a{
+    color:#fa2828 !important;
+    font-weight: 900
+}
+
+#container > div:not(:first-of-type){
+    padding: 120px 10px 30px;
+    width: 80%;
+    margin: 0 auto;
+    position: relative
+}
+#container > div:not(:first-of-type) >div:not(:nth-last-of-type(3)){
+	float: left;
+	width: 50%;
+}
+
+#container > div:not(:first-of-type) img{
+    bottom: 10%;
+    right: 5%;
+    width: 70%;
+	height: 100%;
+    box-shadow: 5px 5px 15px rgba(51, 51, 51, 0.8)
+}
+#container .main3  >img{
+   height: 60%!important;
+    width:80% !important;
+    height: 400px;
+	margin: 20% 0
+}
+
+#container .main3:after{
+	content: '';
+	display: block;
+	clear: both;
+}
+
+
+#container > div:not(:first-of-type) .number{
+    font-size: 4rem;
+    color: #fa2828;
+    padding-left: 10px;
+    margin-bottom: 20px;
+}
+#container > div:not(:first-of-type) > p:nth-of-type(2){
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+#container > div:not(:first-of-type) > p:nth-of-type(3){
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+#container > div:not(:first-of-type) div{
+    font-size: 1.1rem;
+    margin-top: 10%
+}
+#container > div:not(:first-of-type) div p{
+    margin-bottom: 20px;
+/*    line-height: 16px;*/
+}
+#container > div:not(:first-of-type) div p span{
+    position: relative;
+    color: #fff;
+    border-radius: 50%;
+    padding: 2px 6px;
+    background:#32312f; 
+    margin-right: 10px;
+    z-index: 2;
+}
+
+
+#container > div:not(:first-of-type) div b{
+    color: #fa2828;
+    font-size: 1.2rem
+}
+.step .left, .right{
+    float: left
+}
+.left{
+    width: 40%!important
+}
+.right{
+    float: right;
+    width: 60%!important;
+    height: 70%;
+    padding: 20px;
+    text-align: right;
+    margin-top: -20px !important;
+}
+header {
+	background: #fff !important
+}
+.headerwrap a{
+	color:#333!important
+}
+.user i{
+	color:#333!important
+}
+
+#top{
+    position: fixed;
+    background: #fa2828;
+    cursor: pointer;
+    bottom: 10%;
+    right: 5%;
+    border-radius: 50%;
+    border: none;
+    padding: 25px 12px;
+    color: #fff;
+    box-shadow: 2px 2px 10px #333;
+    opacity:0;
+    font-weight: 900;
+    font-size: 1.2rem;
+    z-index: 10000;
+    transition:.3s
+}
+#top i{
+    color: #fff
+}
+#top:hover{
+    opacity: 1
+}
+
+@media (max-width:700px){
+    #container > div {
+		width: 100%;
+		min-height: 100vh;
+		max-height: 100%;
+		border-bottom: 2px solid #d4d4d4
+    }
+    #container > div:not(:first-of-type) {
+        width: 100%;
+    }
+    
+    .main1{
+        background-position: top left;
+        position: relative
+    }
+    .main1tit{
+        position: relative;
+        z-index: 11
+    }
+    .main1 img{
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        height: 52%;
+        z-index: 0  }
+    #sticky{
+        text-align: inherit;
+        white-space:normal;
+        
+    }
+    #sticky span{
+        display: inline-block;
+        width:30%;
+        padding-left: 10px;
+/*        margin-right: 10px;*/
+/*        white-space:normal;*/
+    }
+    #sticky span:not(:first-of-type){
+        margin-left: 3%
+    }
+    #sticky span:not(:first-of-type):after{
+        left: -20px;
+        top: -10px;
+    }
+    #sticky span a{
+        font-size: 1.2rem
+    }
+    
+}

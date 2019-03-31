@@ -1,0 +1,624 @@
+@charset "utf-8";
+@import url(index_header_footer.css);
+
+.container{
+    width: 100%
+}
+.container >div{
+    height: 100vh
+}
+.container > div >div{
+    padding-top: 110px;
+}
+
+/*        main1           */
+.payco_app{
+    background: url(../images/payco_background1.jpg) no-repeat 55% bottom;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100vh;
+    display: table;
+    width: 100%;
+}
+.appWrap{
+    padding: 0!important;
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    display: table-cell;
+    vertical-align: middle
+}
+.appWrap > div{
+/*    width: 50%;*/
+    text-align: center;
+    float:right
+}
+
+.appTitle{
+    letter-spacing: 0.8em;
+    line-height: 2em;
+    font-size: 2.5rem;
+    color: #fff;
+    padding-top:10%;
+    text-shadow: 2px 2px 5px rgba(51, 51, 51, 0.5);
+    /* white-space: nowrap; */
+}
+
+.app{
+    vertical-align: middle;
+    padding-right: 10%
+}
+.app div, .app p a{
+    display: inline-block;
+    height: 100%;
+     color: #fff;
+    font-weight: 800
+}
+.appWrap b{
+    font-weight:800;
+    color:#fa2828;
+    letter-spacing: 0.4em;
+    font-size: 1.3em;
+}
+.app p{
+    width: 280px;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    margin: 20px auto;
+    padding: 15px 0;
+}
+.app p:hover, 
+.applink{
+    transform: translateY(-2px);
+    box-shadow: 2px 2px 3px rgba(51, 51, 51, 0.2);
+}
+.app p a{
+    font-size: 1.8em;
+    font-weight: 700;
+    font-family: arial;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+.app img{
+    width: 30px;
+    vertical-align: middle;
+    margin-right: 5%;
+}
+#moveDown{
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    width: 40px;
+    margin-left: -20px;
+    cursor: pointer;
+    animation: 1s updownmoving infinite linear;
+}
+@keyframes updownmoving{
+    from{
+        transform: translateY(0);
+        opacity: 1
+    }
+    to{
+        transform: translateY(10px);
+        opacity: 0.2
+        
+    }
+}
+
+/*        main2,3,4           */
+.box{
+    width: 100%;
+    height: 100vh
+}
+.box > div{
+    width: 50%;
+    height: 100%;
+    float: left;
+}
+.imgBox{
+    background:url(../images/div2_1.jpg) no-repeat center top;
+    background-size: cover;
+}
+#main3 .imgBox{
+    background:url(../images/div2_3.jpg) no-repeat center bottom;
+    background-size: cover;
+}
+#main4 .imgBox{
+    background:url(../images/div2_2.jpg) no-repeat center bottom;
+    background-size: cover;
+}
+.textBox{
+    position: relative;
+    background: #fa2828
+}
+#main3 .textBox{
+    background: #fff
+}
+#main4 .textBox{
+    background: #32312f
+}
+.textBox .textBoxWrap{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.textBox img{
+    width: 100px;
+    opacity: 0
+/*    visibility: hidden*/
+}
+.textBoxWrap p{
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+.textBoxWrap p:last-of-type{
+    margin-top: 20%;
+    text-align: right;
+    /* white-space: nowrap */
+}
+.textBoxWrap i{
+    color: #fff;
+    margin-left: 5px;
+    font-size: 1.2rem;
+    vertical-align: middle
+}
+#main3 .textBoxWrap i,#main3 .textBoxWrap a{
+    color: red;
+}
+.textBoxWrap a:hover,
+.textBoxWrap a:focus,
+.textBoxWrap a:active{
+    text-decoration: underline
+}
+
+.box:nth-of-type(2n) p, .box:nth-of-type(2n) a{
+    color: #fff;
+}
+.textBox p:nth-of-type(-n+2){
+    margin-bottom: 10%;
+}
+.textBox p:nth-of-type(2){
+    font-size:2.2rem;
+    
+}
+
+p.effect img{
+/*    visibility: visible !important;*/
+    animation: .3s ani1 1 forwards !important;
+/*    animation-delay: .5s*/
+}
+@keyframes ani1{
+    from{
+        opacity: 0;
+        transform: translateX(100px)
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0)
+    }
+}
+#main3 p.effect img{
+    visibility: visible !important;
+        animation: .3s ani2 1 forwards !important;
+    animation-delay: .5s
+}
+@keyframes ani2{
+    from{
+        opacity: 0;
+        transform: translateX(-100px)
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0)
+    }
+}
+
+
+
+
+
+/*        main5          */
+#main5{
+    background: url(../images/div5_bg.jpg) no-repeat center bottom;
+    background-size: cover;
+    position: relative;
+    display: table;
+    width: 100%
+}
+#main5veritcal{
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#main5Wrap{
+    text-align: center;
+    
+}
+
+#main5 h1{
+    text-align: center;
+    font-size: 2.2em;
+    margin-bottom: 10px
+}
+
+#slideWrap{
+   
+    width: 70%;
+    margin: 5% auto;
+    height: 435px;
+    position: relative
+}
+#slideWrap > p{
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    width: 100%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+#slideWrap > p .btn_pre{
+    float: left;
+}
+#slideWrap > p .btn_next{
+    float: right;
+}
+#slideWrap > p:after{
+    content: '';
+    display: block;
+    clear: both
+}
+#slideWrap > p img{
+    width: 50px;
+    height: 80px;
+    cursor: pointer;
+    opacity: 0.2
+}
+#slideWrap > p img:hover{
+    opacity: 0.5;}
+
+#slider .slides > div{
+    float: left;
+}
+#slider .slides:after{
+    content: '';
+    display: block;
+    clear: both
+}
+
+#slider{
+    position: relative;
+    width:765px;
+    height: 440px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.slides{
+    position: absolute;
+    left: 0;
+    height:  440px;
+    width: 2200px;
+    transition: .3s
+}
+.slides > div{
+    width: 240px;
+    height: 435px;
+    margin-right:20px;
+    box-shadow: 3px 2px 3px rgba(51, 51, 51, 0.5)
+}
+.slides dt{
+    width: 100%;
+    height: 239px;
+}
+.slides dd{
+    width: 100%;
+    height: 195px;
+    background: #fff;
+    text-align: center;
+    padding: 10% 0 0 0;
+    position: relative
+}
+.slides dd p{
+    padding: 0 8%;
+    color:#6a6969
+}
+.slides dd p:nth-of-type(2){
+    border-top: 1px solid #d9d9d9;
+    position: absolute;
+    bottom: 0;
+    height: 50px;
+    line-height: 50px;
+    width: 90%;
+    text-align: center;
+    margin: 0 5%;
+}
+.slides dd h3{
+    padding: 8%;
+    font-size: 1.2em;
+    font-weight: 800;
+}
+.slides img{
+    width: 100%;
+    height: 100%;
+}
+#slider .eventCupon dt{
+    width: 100%;
+    height: 100%
+}
+#slider .eventCupon dd{
+    display: hidden;
+    height: 0;
+    width: 0;
+   
+}
+
+.slides >div > a:hover, .slides >div.line > a:hover {
+    text-decoration: underline
+}
+
+
+
+
+/*            main6       */
+#main6{
+    height: 100vh;
+    background: #d4d4d4;
+    display: table;
+    margin: 0 auto
+}
+#main6wrap{
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+   
+/*    transform: translate(-50%, -50%);*/
+    width: 80%;
+    margin: 0 auto!important;
+    padding: 5% 0 !important;
+    text-align: center;
+    background: #fff
+}
+#main6 h1{
+    text-align: center;
+    font-size: 2.2em;
+    margin-bottom: 30px
+}
+#main6 b{
+    font-size:1.1em;
+    color: #fa2828
+}
+
+#main6 ul{
+    max-width:730px;
+    min-width: 600px;
+    height: 50%;
+    margin:40px auto;
+    padding: 10px 4px 0 4px;
+    text-align: center;
+    overflow: hidden;
+}
+#main6 ul:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+#main6 ul li{
+   float: left;
+    width: 180px;
+    height: 100px;
+    background: url(../images/link1.png) no-repeat center;
+    background-size: contain;
+}
+#main6 ul li a{
+    display: inline-block;
+    width: 100%;
+    height: 80%;
+    margin-top: 10%;
+}
+#main6 button{
+    border: none;
+    background: #32312f;
+    color: #fff;
+    padding: 10px;
+    width: 120px;
+    border-radius: 5px; 
+    cursor: pointer;
+}
+#main6 button:first-of-type{
+    background: #fa2828;
+    margin-right: 30px
+}
+
+
+
+
+
+/*		main7 		*/
+#main7{
+	width: 100%;
+	height: auto !important ;
+	background: #d4d4d4;
+	padding: 0 !impotant
+}
+#main7Wrap{
+	width: 80%;
+	margin: 0 auto 0 auto;
+	padding: 0 !important
+}
+#main7Wrap:after{
+	content: '';
+	display: block;
+	clear: both;
+}
+#main7Wrap div{
+	float: left;
+	padding: 5% ;
+	position: relative;
+}
+.leftWrap{
+	width: 70%;
+	position: relative
+}
+.leftWrap .leftmain7{
+	position: absolute;
+	top: 50%;
+	left:50%;
+	transform: translateX(-50%);
+}
+.rightWrap{
+	width: 30%;
+	margin:2% 0;
+	padding-left: 0!important;
+}
+#main7Wrap h1{
+	font-size: 2.2em;
+	margin-bottom: 20px;
+}
+.leftWrap p{
+	margin-bottom: 10px;
+	font-size: 1.2em
+}
+.leftWrap i{
+	margin-right: 10px;
+}
+.rightWrap a{
+	display: inline-block;
+	width:150px;
+	padding: 5% 0;
+	background: #fff;
+	text-align: center;
+	margin-bottom: 5%;
+	font-weight: 700;
+}
+
+/*
+.qna{
+    animation: .3s go 1 forwards
+}
+@keyframes go{
+    from{
+        background: #fa2828;
+        opacity: 0
+    }
+    to{
+        background: #fa2828;
+        opa
+    }
+}
+
+
+*/
+#top{
+    position: fixed;
+    background: #fa2828;
+    cursor: pointer;
+    bottom: 10%;
+    right: 5%;
+    border-radius: 50%;
+    border: none;
+    padding: 25px 12px;
+    color: #fff;
+    box-shadow: 2px 2px 10px #333;
+    opacity:0;
+    font-weight: 900;
+    font-size: 1.2rem;
+    z-index: 100000000000000;
+    transition:.3s
+}
+#top i{
+    color: #fff
+}
+#top:hover{
+    opacity: 1
+}
+
+
+
+
+@media (max-width:700px){
+    .container > div:not(:last-of-type){
+        min-height: 100vh;
+        max-height: 100%;
+        width: 100%;
+    }
+    .app{
+        background-position:center bottom;
+        background-size:100% 100%;
+    }
+	.appWrap{
+		width: 100%;
+	}
+    .appWrap > div{
+        float: none
+    }
+    .box > div{
+    width: 100%;
+    height: 50%;
+    }
+    #main3 > div{
+        float: none
+    }
+    #main3{
+        position: relative;
+    }
+    #main3 .textBox{
+        position: absolute;
+        bottom:0;
+        left: 0;
+        width: 100%;
+    }
+    #main3 .imgBox{
+        position: absolute;
+        top:0;
+        left: 0
+    }
+	.textBox img{
+		width: 80px;
+	}
+    .textBox .textBoxWrap{
+        top: 0;
+        left: 5%;
+        transform: none;
+/*        width: 100%;*/
+    }
+    
+    
+    #slider{
+        width: 245px;
+    }
+    #slideWrap{
+        width: 90%
+    }
+    
+    #main6 ul{
+        max-width: 100%;
+        min-width: 100%;
+    }
+    #main6 ul li{
+        float:none;
+        display: inline-block;
+    }
+    
+    #main7Wrap{
+        width: 100%;
+    }
+    
+    #main7Wrap div{
+        padding: 5% 1%;
+    }
+    .leftWrap{
+        width: 68%;
+    }
+    .rightWrap{
+        margin: 5% 0
+    }
+   
+    #textBox p:nth-of-type(-n+2){
+        margin-bottom: 5%;
+    }
+    .textBoxWrap p:last-of-type{
+        margin-top: 5%;
+    }
+}

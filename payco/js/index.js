@@ -1,10 +1,9 @@
 
 
-//main1 applink
+//main1 app
 
 function appLink(a){
     a.classList.add('applink');
-//    console.log(a)
 }
 
 
@@ -26,12 +25,7 @@ function animation(){
     var displayH = document.documentElement.clientHeight,
         eleH = document.documentElement.scrollHeight,
         scroll = document.documentElement.scrollTop;
-//     console.log("clientHeight :"+displayH)
-//     console.log("scrollHeight :"+eleH)
-//     console.log("scroll :"+scroll)
-//    
     var percentH = (scroll/(eleH - displayH))*100;
-//    console.log("높percentH이 :"+percentH)
     
     var icon = document.querySelectorAll('p.iconani');
     
@@ -39,9 +33,7 @@ function animation(){
         docuScroll = document.documentElement.scrollTop
     for(let i=0; i<icon.length; i++){
         var qurt = displayH * (4/5);
-//        console.log('go'+i)
      if(bodyScroll > qurt*(i+1) || docuScroll > qurt*(i+1)){
-//        console.log('ok'+i)
         
         icon[i].classList.add('effect')
     }else if(docuScroll <qurt){
@@ -63,8 +55,7 @@ function moveNext(){
     var ul = document.querySelector('.slides')
     var currentPx= window.getComputedStyle(ul).getPropertyValue('left')
     var parse = parseInt(currentPx,10)
-//     console.log(currentPx);
-//     console.log(parse)
+
     if(parse <= -movePx*5){
         ul.style.left= '-1300px'
     }else{
@@ -77,9 +68,7 @@ function movePre(){
     var ul = document.querySelector('.slides')
     var currentPx= window.getComputedStyle(ul).getPropertyValue('left')
     var parse = parseInt(currentPx,10)
-//     console.log(currentPx);
-//     console.log(parse);
-   
+
     if(parse >= 0 ){
         ul.style.left= 0
     } else{
@@ -87,19 +76,6 @@ function movePre(){
     }
 }
 
-
-//main6 table
-var linkimg = document.querySelectorAll('#main6 ul li');
-console.log(linkimg.length)
-for(let i =0; i<linkimg.length; i++){
-//    linkimg[i].style.backgroundImage="url(../images/'link"+(i+1)+".png')"
-    linkimg[i].style.backgroundImage=`url(../images/'link${i+1}.png')`
-//    linkimg[i].style.backgroundImage="url(../images/'link2.png')"
-    console.log('linkimg.length')
-}
-
-
-//top
 
 function Top(){
     var doc =  document.documentElement;
@@ -112,7 +88,6 @@ function Top(){
     }
             
     top.addEventListener('click',function(){
-//                top.style.opacity = "1"
         window.scrollTo({
             top : 0,
             behavior : 'smooth' 

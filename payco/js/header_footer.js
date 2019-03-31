@@ -1,6 +1,6 @@
 //noticewrap Close
 function noticeClose(){
-    var noticeWrap = document.getElementById('noticewrap');
+    const noticeWrap = document.querySelector('.noticewrap');
     noticeWrap.classList.toggle('noticeClose');
 }
 
@@ -13,7 +13,7 @@ var color = document.querySelector('.gnb');
 
 gnbHover[3].addEventListener('click',function(){
     window.scrollTo({
-        top:document.getElementById('main5').offsetTop,
+        top:document.querySelector('.payco_partner').offsetTop,
         behavior:'smooth'
     })
     event.preventDefault();
@@ -21,7 +21,7 @@ gnbHover[3].addEventListener('click',function(){
     
 gnbHover[4].addEventListener('click',function(){
     window.scrollTo({
-        top:document.getElementById('main7').offsetTop,
+        top:document.querySelector('.payco_cs').offsetTop,
         behavior:'smooth'
     })
     event.preventDefault();
@@ -52,20 +52,22 @@ function usermoreOpen(){
 
 for(var i=0; i<gnbHover.length;i++){
     gnbHover[i].addEventListener('click',hoverColor)
+
 }
 
-function hoverColor(e){
+function hoverColor(){
     for(var j=0;j<gnbHover.length;j++){
         if(color.className == 'blackFont'){
             
-        gnbHover[j].style.color ='#333'
+            gnbHover[j].style.color ='#333'
         } else{
             gnbHover[j].style.color ='#fff'
         }
     }
     
+    
     this.style.color='#fa2828';
-    console.log(this)
+    console.log('this는'+this)
 };
 
 
@@ -74,13 +76,9 @@ function hoverColor(e){
 window.onscroll = function() {scrollFunction()};
     function scrollFunction(){
         var height =document.documentElement.clientHeight
-//        console.log(height)
-        var mqw = window.matchMedia("screen and (min-widht:700px)")
-    if(window.matchMedia("(min-width:700px)") && document.body.scollTop > height/4 || document.documentElement.scrollTop >height/4){
+    if(window.innerWidth > 700 && document.body.scollTop > height/4 || document.documentElement.scrollTop >height/4){
         document.querySelector('header').style.background ='#fff';
         color.classList.add('blackFont');
-        console.log(screen.width)
-        console.log('ok')
         
     } else{
         document.querySelector('header').style.background ='transparent';
@@ -91,25 +89,23 @@ window.onscroll = function() {scrollFunction()};
 
 
 //header mobile gnb
-var menubar = document.querySelector('#menubar'),
-    nav = document.querySelector('.gnb > ul');
- var gnb =document.querySelector('.gnb');
+const menubar = document.querySelector('.menubar');
 
 menubar.addEventListener('click',opengnb)
-    
-function opengnb(e){
+
+function opengnb(){
+    const gnb =document.querySelector('.gnb');
+    const nav = document.querySelector('.gnb > ul');
         
-    console.log(this)
     menubar.classList.toggle('close')
     
-        var current = menubar.className;
-          if(current != 'close'){
-            nav.style.height = '0'
-           gnb.style.height ='0';
-       }else {
-            nav.style.height = '320px'
-           gnb.style.height ='100vh';
-       }
+    if(menubar.className == 'menubar'){
+        nav.style.height = '0'
+        gnb.style.height ='0';
+    }else {
+        nav.style.height = '320px'
+        gnb.style.height ='100vh';
+    }
     }
 
 
@@ -121,6 +117,7 @@ var linkul = document.querySelector('.linksite ul')
 var linkli = document.querySelectorAll('.linksite ul li')
 var linklia= document.querySelectorAll('.linksite ul li a');
 var icon = document.querySelector('.linksite > a > i')
+
 function familyOpen(){
     event.preventDefault();
     linkul.classList.toggle('onLink');

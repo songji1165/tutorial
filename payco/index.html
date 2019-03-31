@@ -8,32 +8,32 @@
     <link rel="stylesheet" href="css/index.css">
     
 </head>
-<body style="overflow-x:hidden">
+<body>
     <div id="wrapper">
         <header>
-            <div id="noticewrap">
-              <div id="notice">
-<!--               <p><i class="fas fa-volume-up"></i></p>-->
-                <div id="slideNotiWrap">
-                <ul id="slide">
-                    <li><a href="su">	PAYCO 포인트 이용한도 변경 안내</a></li>
-                    <li><a href="">	제로페이 결제 스미싱 문자 관련 주의사항 안내</a></li>
-                    <li><a href="">	PAYCO 서비스 점검 안내(02/20 07:00~09:16)</a></li>
-                    <li><a href="">	PAYCO-삼성페이 결제방법 안내</a></li>
-                </ul>
-                  </div>
-                <p class="noticeicon">
-					<span><button id="pre"><i class="fas fa-caret-left"></i></button></span>
-					<span><button id="next"><i class="fas fa-caret-right"></i></button></span>
-                    <span><a href="#">더 보기</a></span>
-                    <span ><a href="#" onclick="noticeClose()"><i class="fas fa-times"></i></a></span>
-                </p>
+            <div class="noticewrap">
+              <div class="notice">
+                <div class="slideNotiWrap">
+                    <ul class="slide">
+                        <li><a href="">	PAYCO 포인트 이용한도 변경 안내</a></li>
+                        <li><a href="">	제로페이 결제 스미싱 문자 관련 주의사항 안내</a></li>
+                        <li><a href="">	PAYCO 서비스 점검 안내(02/20 07:00~09:16)</a></li>
+                        <li><a href="">	PAYCO-삼성페이 결제방법 안내</a></li>
+                    </ul>
+                </div>
+                <div class="noticeicon">
+					<button class="pre"><i class="fas fa-caret-left"></i></button>
+				    <button class="next"><i class="fas fa-caret-right"></i></button>
+                    <button href="#">더 보기</button>
+                    <button href="#" onclick="noticeClose()"><i class="fas fa-times"></i></b>
+                </div>
                 </div>
             </div>
+
           <div class="headerwrap">
                <h1 class="logo"><a href="index.html"><img src="images/paycologo.png" alt="PAYCO"></a></h1>
                <div class="gnb">
-                  <div id="menubar">
+                  <div class="menubar">
                       <div class="bar1"></div>
                       <div class="bar2"></div>
                       <div class="bar3"></div>
@@ -57,24 +57,20 @@
             
         </header>
         
-        <div id="mainwrap">
-            <div id="main1">
-                <div id="main1Wrap">
+        <div class="container">
+            <div class="payco_app">
+                <h2>메인타이틀</h2>
+                <div class="appWrap">
 <!--                   media #main1Wrap > div display block -->
                     
                     <div class="app">
-                    <div class="main1Title">
-                        결제는간편하게<br>
-                        할인은강력하게<br>
-                        적립은똑똑하게
-                    </div>
-<!--
-                        <div class="apptext">
-                            <b>PAYCO</b>의<br>스마트한 금융 세상으로<br>초대합니다
+                        <div class="appTitle">
+                            결제는간편하게<br>
+                            할인은강력하게<br>
+                            적립은똑똑하게
                         </div>
--->
-                         <p onclick="appLink(this)"><a href=""><img src="images/googlePlay.png" alt="googlePaly">Google Play</a></p>
-                         <p onclick="appLink(this)"><a href=""><img src="images/apple.png" alt="apple">App Store</a></p>
+                        <p onclick="appLink(this)"><a href=""><img src="images/googlePlay.png" alt="googlePaly">Google Play</a></p>
+                        <p onclick="appLink(this)"><a href=""><img src="images/apple.png" alt="apple">App Store</a></p>
                     </div>
                     <a href="#main2" onclick="moveMain2()"><img src="images/moveDown.png" id="moveDown" alt="moveDown">
                     </a>
@@ -83,6 +79,7 @@
             
             
             <div id="main2" class="box">
+                    <h2>메인타이틀</h2>
                 <div class="main2L imgBox">
                     
                 </div>
@@ -97,6 +94,7 @@
                 </div>
             </div>
             <div id="main3" class="box">
+                    <h2>메인타이틀</h2>
                 <div class="main3L textBox">
                    <div class="textBoxWrap">
                     <p class="iconani"><img class="reverse" src="images/icon_t.png" alt="tmoney"></p>
@@ -111,6 +109,7 @@
                 </div>
             </div>
             <div id="main4" class="box">
+                    <h2>메인타이틀</h2>
                 <div class="main4L imgBox">
                     
                 </div>
@@ -126,17 +125,18 @@
             </div>
             
             
-            <div id="main5">
-             <div id="main5veritcal">
-              <div class="main5Wrap">
-               <h1>NEWS &amp; EVENT</h1>
+            <div class="payco_evt">
+
+             <div class="veritcalWrap">
+              <div class="payco_evtWrap">
+               <h3>NEWS &amp; EVENT</h3>
 <!--               <img class="phone" src="images/iphoe.png" alt="mobilephone canvas">-->
-              <div id="slideWrap">
+              <div class="slideWrap">
                <p>
                    <img src="images/icon_back.png" alt="pre" class="btn_pre" onclick="movePre()">
                    <img src="images/icon_next.png" alt="next" class="btn_next" onclick="moveNext()">
                </p>
-                <div id="slider">
+                <div class="slider">
                     <div class="slides">
                         
                         <div class="slide1">
@@ -259,9 +259,9 @@
                 </div>
                 </div>
             </div>
-            <div id="main6">
-               <div id="main6wrap">
-                <h1>어디서나 간편하게<br> <b>PAYCO</b>로 이용하세요!</h1>
+            <div class="payco_partner">
+               <div class="partnerWrap">
+                <h3>어디서나 간편하게<br> <b>PAYCO</b>로 이용하세요!</h3>
                 <ul>
                     <li><a href="http://www.ticketmonster.co.kr/" target="_blank" title="바로가기"></a></li>
                     <li><a href="http://www.ticketmonster.co.kr/" target="_blank" title="바로가기"></a></li>
@@ -285,22 +285,23 @@
                 <button>모든 제휴사 보기</button>
                 </div>
             </div>
-            <div id="main7">
-                <div id="main7Wrap">
+            <div class="payco_cs">
+                <h4>고객센터</h4>
+                <div class="csWrap">
                    <div class="leftWrap">
-                   <div class="leftmain7">
-                    <h1>고객센터 1544-6891</h1>
-                    <p><i class="far fa-clock"></i> 오전 10시 ~ 오후 7시까지 운영 / 토, 일요일 및 공휴일은 휴무입니다.</p>
-                    <p><i class="far fa-envelope"></i><u>E-MAILhelp@payco.com</u></p>
-                    </div>
+                        <div class="leftmain7">
+                            <h1>고객센터 1544-6891</h1>
+                            <p><i class="far fa-clock"></i> 오전 10시 ~ 오후 7시까지 운영 / 토, 일요일 및 공휴일은 휴무입니다.</p>
+                            <p><i class="far fa-envelope"></i><u>E-MAILhelp@payco.com</u></p>
+                        </div>
 					</div>
 					<div class="rightWrap">
-						<p>
+						
 							<a href="#">자주하는 질문</a>
-						</p>
-						<p>
+						
+						
 							<a href="#">1:1 문의하기</a>
-						</p>
+						
 					</div>
                 </div>
             </div>

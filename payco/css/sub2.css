@@ -1,9 +1,9 @@
 
-     #wrapper .current a{
+     /* #wrapper .current a{
         color:#fa2828 !important;
         font-weight: 900
     }
-        
+         */
         header{
             background: #fff !important;
             position: relative!important;
@@ -28,7 +28,8 @@
             position: relative;
         }
         
-        .title h2{
+        .title p{
+            
             color: #fff;
             font-size: 2.5rem;
             position: absolute;
@@ -43,7 +44,7 @@
             bottom: 0;
             left: 65%;
         }
-        .title h2 b{
+        .title p b{
             color: #fa2828;
             font-size:2.5rem;
         }
@@ -129,9 +130,19 @@
             border-bottom: 1px solid #d4d4d4
         }
    
+        .btnline{
+            width: 100%;
+            padding: 60px 0;
+            text-align: center
+        }
        
         
         @media (max-width:700px){
+            .title p{
+                width: 100%;
+                left: 0;
+                text-align: center;
+            }
             .videolist > div{
                 float: none;
                 width: 100%;
@@ -146,11 +157,6 @@
             .char{
                 display: none
             }
-        }
-        .btnline{
-            width: 100%;
-            padding: 60px 0;
-            text-align: center
         }
 
     

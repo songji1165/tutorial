@@ -20,7 +20,7 @@ ul li{
     list-style: none;
 }
 
-.skip{
+.skip, h2, h4{
 	width: 0;
 	height: 0;
 	font-size: 0;
@@ -52,6 +52,11 @@ header{
     margin: 0 auto;
 }
 
+#wrapper .current a{
+    color:#fa2828 !important;
+    font-weight: 900
+}
+    
 .logo{
     display: inline-block;
 }
@@ -91,7 +96,7 @@ header{
     padding-left: 0
 }
 .gnb li a:hover{
-    color: #fa2828 !important;
+    color: #fa2828 ;
     font-weight:900
 }
 .user i{
@@ -156,36 +161,34 @@ ul.userOpen{
     font-size: 1.1rem;
 }
 
-#menubar{
+.menubar{
     display: none;
     cursor: pointer;
     position: absolute;
     top: 22%;
     left: 6%;
 }
-#menubar > div{
+.menubar > div{
     width: 30px;
     height: 4px;
     background: #fa4848;
     margin: 5px 0;
     transition: .3s
 }
-#menubar.close >div:nth-child(1){
+.menubar.close >div:nth-child(1){
     transform: rotate(45deg) translate(7px,6px )
 }
-#menubar.close >div:nth-child(2){
+.menubar.close >div:nth-child(2){
     transform: translateX(-50px);
     opacity: 0
 }
-#menubar.close >div:nth-child(3){
+.menubar.close >div:nth-child(3){
     transform: rotate(-45deg) translate(6px,-6px )
 }
-.noticeClose{
-    height: 0 !important;
-    overflow: hidden;  
-   padding: 0 !important
-}
-#noticewrap{
+
+
+/* notice */
+.noticewrap{
     height:35px;
     padding: 5px 0;
     text-align: center;
@@ -193,12 +196,13 @@ ul.userOpen{
     background: rgba(0, 0, 0, 0.5);
     transition: .5s;
 }
-#notice{
+.notice{
     width: 80%;
     margin: 0 auto;
     position: relative;
 }
-#notice:before{
+
+.notice:before{
     content: '';
    position: absolute;
     width: 20px;
@@ -211,35 +215,48 @@ ul.userOpen{
     left: 10%;
      z-index: 120;
 }
-#notice:after{
-    content: '';
+.notice:after{
+    content:'';
     display: block;
     clear: both;
 }
-#notice ul{
+.slide{
     display: inline-block;
     height:25px;
     line-height: 25px;
     width: 70%;
     text-align: left;
     padding-left: 15%;
-    float: left;
+    /* float: left; */
     overflow: hidden;
     position: relative;
     background-size: 20px;
 }
-
-#noticewrap a, #noticewrap i{
+.slide li{
+   white-space: nowrap
+}
+.slideNotiWrap:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.slideNotiWrap{
+    margin-left: 10%;
+    float: left;
+    width: 50%;
+    text-align: left
+}
+.noticewrap a, .noticewrap i{
     color: #fff;
 }
-#noticewrap ul a{
+.slide a{
     font-size: 0.7em;
 }
 .noticeicon{
     width: 30%;
     overflow: hidden;
-    padding: 0;
-    margin: 0;
+    line-height: 25px;
+    float: right
 }
 .noticeicon span{
     display: inline-block;
@@ -247,39 +264,19 @@ ul.userOpen{
     float: left;
     white-space: nowrap
 }
-.noticeicon span button{
+.noticeicon button{
 	border: none;
 	background: none;
-	padding: 0 5px;
-	cursor: pointer
-}
-.noticeicon span:nth-child(-n+2){
-    width: 10%;
-}
-.noticeicon span:last-child{
-    float: right
-}
-.noticeicon span > i{
-    font-size: 1.5em ;
-    vertical-align: middle;
+	padding: 0 10px;
     cursor: pointer;
-     line-height: 25px;
-}
-#noticewrap p{
-    display: inline-block;
-    line-height: 25px;
-}
-#notice .noticeicon span a{
-    display: inline-block;
-    vertical-align: middle;
-    text-align: right;
-}
-.noticeicon span i{
-   
-    width: 20%;
+    color: #fff
 }
 
-
+.noticeClose{
+    height: 0 ;
+    overflow: hidden;  
+    padding: 0 
+}
 
 /*    footer     */
 
@@ -370,19 +367,24 @@ footer .linksite ul.onLink {
 
 @media (max-width:700px){
 	footer > div {
-		float: left;
-		width: 100% ; 
+        float: none;
+        margin: 5% 0
 	}
 	footer .service{
-		position: relative;
-		float: left;
-		text-align: left;
-		
-	}
+        position: relative;
+        width: 100%
+    }
+    footer .service li{
+        float: none;
+        margin: 0
+    }
 	footer .footerlogo{
 		text-align: center;
-	}
-    #notice{
+    }
+    footer .linksite{
+        float: none
+    }
+    .notice{
         width: 100%;
     }
 
@@ -426,7 +428,7 @@ footer .linksite ul.onLink {
         padding: 0;
     }
     .gnb ul li a{
-        color: #333;
+        color: #333 !important;
     }
     .user{
         position: absolute;
@@ -443,8 +445,32 @@ footer .linksite ul.onLink {
         position: absolute;
 		left: -20%
 }
-    #menubar{
+    .menubar{
         display: block
+    }
+
+    /* noticewrap */
+    .notice{
+        width: 100%
+    }
+    .notice:before{
+        left: 10px;
+    }
+    .slideNotiWrap{
+        width: 100%;
+        margin: 0
+    }
+    .slide{
+        text-align: center
+    }
+    .noticeicon button:not(:last-of-type){
+        display: none;
+    }
+    .noticeicon button:last-of-type{
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 25px;
     }
 }
 

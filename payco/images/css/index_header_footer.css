@@ -1,0 +1,466 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic:700,800&subset=korean');
+
+*,html,body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #333;
+    font-size: 13px;
+    font-family: 'Nanum Gothic', sans-serif, '굴림', 'gulim'
+}
+
+img{border: none}
+
+a{color: #333;
+  text-decoration:none;
+}
+
+ul li{
+    list-style: none;
+}
+
+.skip, h2, h4{
+	width: 0;
+	height: 0;
+	font-size: 0;
+	line-height: 0;
+	position: absolute;
+	left: -9999999999px;
+    overflow: hidden;
+    display: none;
+    visibility: hidden
+}
+#wrapper{
+    width: 100%; 
+}
+
+
+
+/*        header         */
+header{
+    width: 100%;
+    position: fixed;
+    transition:all .4s;
+    z-index: 10000
+}
+
+.headerwrap{
+    height: 60px;
+    max-width: 1200px;
+   width: 80%;
+    margin: 0 auto;
+}
+
+.logo{
+    display: inline-block;
+}
+.logo img{
+    height: 35px;
+    margin: 12px 0;
+}
+
+.gnb{
+    float: right;
+}
+.gnb:after, ul:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.gnb > ul{
+/*    width: 80%;*/
+    float: left;
+    white-space: nowrap
+}
+.gnb >ul > li a{
+    color: #fff;
+    font-weight: normal;
+    letter-spacing: 0.1em;
+    font-size: 1.2em
+}
+.gnb > ul > li{
+    float: left;
+    text-align: right;
+    padding-left: 20px;
+    text-align: right;
+    line-height: 60px;
+    white-space: nowrap
+}
+.gnb > ul > li:first-of-type{
+    padding-left: 0
+}
+.gnb li a:hover{
+    color: #fa2828 !important;
+    font-weight:900
+}
+.user i{
+    font-size: 27px;
+    line-height: 60px;
+    color: #fff;
+}
+.user{
+    float: right;
+    margin-left: 10px;
+    position: relative;
+	cursor: pointer;
+    width: 50px;
+    text-align: center;
+}
+.blackFont a, .blackFont i {
+    color: #333!important;
+}
+.usermore{
+    display: none;
+    border-top: 2px solid #fa2828;
+    width: 100px;
+    text-align: center !important;
+    position: absolute;
+    left:0;
+    transform: translateX(-22%);
+    top: 60px;
+    background: #fff;
+    z-index: 10;
+    box-shadow: 1px 1px 3px rgba(51, 51, 51, 0.5);
+    border-radius: 0 0 5px 5px 
+}
+.usermore:before{
+    content: '';
+    position: absolute;
+    top:-24px;
+    left:50%;
+    transform: translateX(-58%);
+    border:12px solid; 
+    border-color: transparent transparent #fa2828 transparent;
+}
+.usermore:after{
+    content: '';
+    position: absolute;
+    top:-21px;
+    left:50%;
+    transform: translateX(-70%);
+    border:12px solid; 
+    left: 53%;
+    border-color: transparent transparent #fff transparent;
+}
+ul.userOpen{
+    display: block
+}
+.user .usermore li{
+    line-height: 20px;
+    padding: 10px 0;
+    position: relative
+}
+.user .usermore a{
+    color: #333;
+    font-size: 1.1rem;
+}
+
+.menubar{
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    top: 22%;
+    left: 6%;
+}
+.menubar > div{
+    width: 30px;
+    height: 4px;
+    background: #fa4848;
+    margin: 5px 0;
+    transition: .3s
+}
+.menubar.close >div:nth-child(1){
+    transform: rotate(45deg) translate(7px,6px )
+}
+.menubar.close >div:nth-child(2){
+    transform: translateX(-50px);
+    opacity: 0
+}
+.menubar.close >div:nth-child(3){
+    transform: rotate(-45deg) translate(6px,-6px )
+}
+
+
+/* notice */
+.noticewrap{
+    height:35px;
+    padding: 5px 0;
+    text-align: center;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    transition: .5s;
+}
+.notice{
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.notice:before{
+    content: '';
+   position: absolute;
+    width: 20px;
+    height: 25px;
+    line-height: 25x;
+    background: url(../images/noticeicon.png) no-repeat 0 0;
+    background-size: 20px;
+    z-index: 2000;
+    top:4px;
+    left: 10%;
+     z-index: 120;
+}
+.notice:after{
+    content:'';
+    display: block;
+    clear: both;
+}
+.slide{
+    display: inline-block;
+    height:25px;
+    line-height: 25px;
+    width: 70%;
+    text-align: left;
+    padding-left: 15%;
+    /* float: left; */
+    overflow: hidden;
+    position: relative;
+    background-size: 20px;
+}
+.slide li{
+   white-space: nowrap
+}
+.slideNotiWrap:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.slideNotiWrap{
+    margin-left: 10%;
+    float: left;
+    width: 50%;
+    text-align: left
+}
+.noticewrap a, .noticewrap i{
+    color: #fff;
+}
+.slide a{
+    font-size: 0.7em;
+}
+.noticeicon{
+    width: 30%;
+    overflow: hidden;
+    line-height: 25px;
+    float: right
+}
+.noticeicon span{
+    display: inline-block;
+    width: 23% ;
+    float: left;
+    white-space: nowrap
+}
+.noticeicon button{
+	border: none;
+	background: none;
+	padding: 0 10px;
+    cursor: pointer;
+    color: #fff
+}
+
+.noticeClose{
+    height: 0 ;
+    overflow: hidden;  
+    padding: 0 
+}
+
+/*    footer     */
+
+footer {
+    width: 80%;
+    margin: 0 auto;
+    padding:50px 0 80px 0;
+    position: relative;
+    z-index: 999
+}
+footer:after{
+    content: '';
+    display: block;
+    clear: both
+}
+footer div{
+    float: left
+}
+footer .footerlogo img{
+    width: 100px;
+}
+footer .service{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 52%;
+}
+footer .service ul{
+    margin-bottom: 15px;
+    padding: 5px;
+        
+}
+footer .service ul:after{
+    content: '';
+    display: block;
+    clear: both
+}
+footer .service li{
+   float: left;
+    line-height: 20px;
+    margin-left: 15px
+}
+footer .service li:hover a{
+    text-decoration: underline
+}
+footer .service li:first-of-type{
+    margin: 0
+}
+
+footer .linksite{
+/*    display: inline-block;*/
+    float: right;
+    width: 150px;
+    border: 1px solid #d4d4d4;
+	position: relative;
+/*    height: 30px;*/
+    line-height: 30px;
+}
+footer .linksite a{
+    width: 100%;
+    display: inline-block;
+    padding-left: 10px
+}
+footer .linksite > a i{
+    float: right;
+    font-size: 20px;
+    line-height: 30px;
+    padding-right: 10px;
+}
+footer .linksite ul{
+    position: absolute;
+    width: 150px;
+    bottom: 30px;
+    left: 0;
+    background: #fff;
+    border: 1px solid #d4d4d4;
+    border-bottom: none;
+    margin-left: -1px;
+    z-index: 999999
+}
+footer .linksite ul.onLink {
+    display: none;
+}
+.rotate{
+	transform: rotateX(180deg)
+}
+
+
+@media (max-width:700px){
+	footer > div {
+		float: left;
+		width: 100% ; 
+	}
+	footer .service{
+		position: relative;
+		float: left;
+		text-align: left;
+		
+	}
+	footer .footerlogo{
+		text-align: center;
+	}
+    .notice{
+        width: 100%;
+    }
+
+    .headerwrap{float: none;
+        width: 100%;
+        max-width: 100%;
+        position: relative;
+        padding:0 0;
+        margin: 0;
+        text-align: center;
+        background: #fff;
+    }
+    .logo{float: none;
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        overflow: hidden
+        
+    }
+    
+    
+    .gnb{
+        float: none;
+       
+    }
+    .gnb > ul{
+        height: 0;
+        overflow: hidden;
+        float: none;
+        width: 100%;
+        padding: 0;
+        margin-top: -5px;
+        background: #fff;
+        transition: .5s;
+		box-shadow: 2px 2px 5px #d9d9d9;
+		z-index: 10000
+    }
+    .gnb ul li{
+        float:none;
+        text-align: center;
+        padding: 0;
+    }
+    .gnb ul li a{
+        color: #333;
+    }
+    .user{
+        position: absolute;
+        top: 0;
+        right: 5%;
+        height: 100%;
+    }
+    .user i{
+        display: block !important;
+        color: #333
+    }
+    .usermore{
+    width: 100px !important;
+        position: absolute;
+		left: -20%
+}
+    .menubar{
+        display: block
+    }
+
+    /* noticewrap */
+    .notice{
+        width: 100%
+    }
+    .notice:before{
+        left: 10px;
+    }
+    .slideNotiWrap{
+        width: 100%;
+        margin: 0
+    }
+    .slide{
+        text-align: center
+    }
+    .noticeicon button:not(:last-of-type){
+        display: none;
+    }
+    .noticeicon button:last-of-type{
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 25px;
+    }
+}
+
