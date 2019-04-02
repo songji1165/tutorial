@@ -1,0 +1,356 @@
+@charset "utf-8";
+@import url(reset.css);
+@import url(header.css);
+@import url(footer.css);
+
+#main{
+   width: 100%;
+    position: relative
+}
+
+
+/*                        container1*/
+#container1{
+    width:100%;
+    position: relative;
+/*    background: skyblue*/
+    
+}
+
+#slide{
+    width: 100%;
+    height:600px; 
+    position: relative
+    /*JS로 http://1004lucifer.blogspot.com/2014/04/css-div-width-height.html  resize참고*/
+}
+#slide ul li{
+    position: absolute;
+    width: 100%;
+    height: 600px;
+    top: 0;
+    left: 0;    
+/*    border: 1px solid;*/
+    transition: .5s
+}
+
+#slide .slidescript{
+    text-align: right;
+    margin: 10% 10%;
+    font-size: 0.8rem;
+    letter-spacing: 2px
+}
+#slide .slidescript h3{
+    font-size: 1.7rem;
+    margin-bottom: 10px
+}
+#slide .slidescript span{
+     font-size: 1rem;
+    font-weight: 600
+}
+#slide li:not(:nth-child(2)){
+    color: #fff
+}
+.slidebg li{
+    opacity: bacground 0;
+}
+.slidebg .slide1{
+    background: url(images/slide_1_main.jpg) no-repeat center center;
+    background-size: cover;
+    opacity: 0
+}
+.slidebg .slide2{
+    background: url(images/slide_2.jpg) no-repeat center center;
+    background-size: cover;
+     opacity: 0
+}
+.slidebg .slide3{
+    background: url(images/slide_3.jpg) no-repeat center center;
+    background-size: cover;
+     opacity: 0
+}
+
+#slide .slidebtn{
+    position: absolute;
+    left: 50%;
+    top:60%;
+    transform: translateX(-50%)
+}
+.slidebtn label{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    margin: 2px;
+    cursor: pointer
+}
+
+.nxtbtn{
+    position: absolute;
+    width: 100%;
+    top: 30%;
+    left:50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    padding:10px;
+    transition: all .3s
+    
+}
+.nxtbtn img:last-child{
+    float: right
+}
+.nxtbtn img{
+    width: 50px;
+    opacity: 0.1;
+	cursor: pointer
+}
+
+.nxtbtn img:hover{
+    opacity: 0.8;
+    transform: translateX(15px)
+}
+.nxtbtn img:last-child:hover{
+    opacity: 0.8;
+    transform: translateX(-15px)
+}
+
+#slide1:checked ~ .slidebg .slide1{
+   opacity: 1
+}
+#slide2:checked ~ .slidebg .slide2{
+   opacity: 1
+}
+#slide3:checked ~ .slidebg .slide3{
+   opacity: 1
+}
+#slide1:checked ~ .slidebtn label:first-child{
+    background: #fff;
+}
+#slide2:checked ~ .slidebtn label:nth-child(2){
+    background: #fff;
+}
+#slide3:checked ~ .slidebtn label:last-child{
+    background: #fff;
+}
+
+
+/*           slide 써치창      */
+#search_DA{
+    position: absolute;
+    top: 400px;
+    width: 100%;
+    height: auto;
+    background: rgba(230, 126, 34, 0.7);
+}
+#search_DA form{
+    width: 100%;
+    height: 200px;
+    padding: 15px 5%
+}
+#search_DA ul {
+    width: 100%;
+    margin-bottom: 15px
+}
+#search_DA ul li{
+    height: 50px;
+    width: 47%;
+    float: left;
+}
+#search_DA ul li span{
+    display: inline-block;
+    line-height:50px;
+    width: 100%;
+    border-bottom: 1px solid rgb(243, 156, 18);
+    color: rgb(243, 156, 18);
+    text-align: center;
+    font-size: 1.2em;
+}
+#search_DA ul li label{
+    cursor: pointer
+}
+#search_DA ul li:first-child {
+    margin-right: 5%
+}
+#search_DA ul li i{
+    margin-right: 20%
+}
+#search_DA ul:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+#search_DA ul li input:checked + span{
+     border-bottom: 1.5px solid #fff;
+    color: #fff;
+}
+#search_DA ul li input:checked ~ label{
+    color: #fff;
+}
+.main_search{
+    width: 100%;
+    height: 60px;
+    border-bottom: 1.5px solid #fff;
+    padding: 5px 0
+}
+.main_search input{
+    height: 50px;
+    padding-left: 10px;
+    float: left;
+    width: 80%;
+    font-size: 1.3em;
+    background: none;
+    outline: none;
+    border: none;
+    color: #fff
+}
+.main_search input::placeholder{
+    color: #fff
+}
+.main_search a{
+    float: right;
+    padding: 8px;
+    margin-right: 10px;
+}
+.main_search a i{
+    font-size: 2.2em;
+    color: #fff
+}
+
+.DA_more{
+    display: inline-block;
+    width: 100%;
+    text-align: right;
+    height: 50px;
+    line-height: 50px;
+    text-align: right;
+    color: #d9d9d9;
+/*    padding-right: 35px;*/
+    position: relative;
+    margin-top: 10px;
+	cursor: pointer
+}
+.DA_more i{
+    font-size: 30px;
+    vertical-align: middle;
+    margin-left: 5px
+}
+/*
+.DA_more > a:after{
+    content: '';
+    position: absolute;
+    top: 20px;
+    right: 5px;
+    width: 2px;
+    height: 2px;
+    border:10px solid;
+    border-radius: 20%;
+    border-color: #d9d9d9 transparent transparent transparent
+}
+*/
+
+/*    More table*/
+#DA_more{
+    width: 100%;
+    height:0;
+    position: relative;
+/*    display: none;*/
+    z-index:100;
+	overflow: hidden;
+	transition: .3s
+	
+}
+.DAtable{
+    height:200px!important;
+}
+#DA_more table{
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    font-size: 12px;
+}
+#DA_more table tr{
+    height: 40px;
+    background:  rgb(230, 126, 34);
+    border: 1px solid #fff;
+}
+#DA_more table th{
+    background:  #fff;
+    border: 1px solid #fff;
+}
+#DA_more .moreinfo{
+    position: absolute;
+    left: 0;
+    top:-34px;
+    border: 3px solid #fff;
+    padding: 5px;
+    border-radius: 3px;
+	cursor: pointer
+}
+ .moreinfo i{
+    font-size:1.5em;
+    color:#fff;
+}
+
+
+
+
+
+
+/*       container2 */
+#container2{
+    width: 100%;
+    padding: 50px 5%;
+    text-align: center;
+    font-size: 1.2em;
+}
+#container2 > div{
+    height: 200px;
+    border-bottom: 2px solid #9d9c9c;
+    margin-bottom: 50px;
+}
+#container2 p{
+    width: 100%;
+    position: relative;
+}
+#container2 img{
+    width: 50px;
+}
+#container2 p:before{
+    content: '';
+    position: absolute;
+    width: 30%;
+    height: 2px;
+    background: #9d9c9c;
+    top:23px;
+    left: 0
+}
+#container2 p:after{
+    content: '';
+    position: absolute;
+    width: 30%;
+    height: 2px;
+    background: #9d9c9c;
+    top:23px;
+    right: 0
+}
+#container2 h2{
+    font-size: 2em;
+    height: 60px;
+    margin: 5px 0;
+}
+#container2 .guidememo{
+    margin-top: 20px;
+}
+#container2 .guidememo span{
+    margin: 0 7px
+}
+#container2 .guidememo span a:hover,
+#container2 .guidememo span a:active,
+#container2 .guidememo span a:focus{
+    text-decoration: underline
+}
+
+
+
+

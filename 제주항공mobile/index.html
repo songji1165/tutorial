@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>제주국제공항</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,500,700,900&amp;subset=korean" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<!--
+    <script type="text/javascript" language="JavaScript">
+	   window.resizeTo(400,700);
+    </script>
+-->
+    
+</head>
+<body>
+<!--   width:400px -->
+    <div id="wrapper">
+        
+<!--        100% * 67px-->
+       <div id="headerWrap">
+        <header>
+           
+<!--           70px*50px-->
+            <h1 class="logo">
+                <a href="index.html"><img src="images/logo.jpg" alt="logo"></a>
+            </h1>
+            
+               
+<!--                 icon 40px*40px   -->
+                 <button class="gnbicon" id="navopenbtn"><span></span></button>
+<!--                 <a href="" class="gnbicon" id="navopenbtn"><span></span></a>-->
+<!--                 <a href="#gnbpop" class="gnbicon"><span></span></a>-->
+               
+                       
+                
+                
+            <div id="gnbpopWrap">   
+<!--            width:90%-->
+             <div id="gnbpop">
+             
+<!--                height:100px-->
+                <div id="gnbtop">
+                <div id="gnbtop_inside">
+                    <div class="gnbtop_T">
+                        <span>
+                            <a href=""><img src="images/sidebar_map.png" alt="mapicon" class="gnbTopicon">공항지도</a>
+                        </span>
+                        <span>
+                            <a href=""><img src="images/gnb_searchicon.png" alt="searchicon" class="gnbTopicon">검색</a>
+                        </span>
+                        
+                        <a href="#" onclick="navClose()"><span></span></a>
+                    </div>
+                    
+                    <div class="gnbtop_B">
+                        <span><a href="">로그인</a></span>
+                        <span><a href="">회원가입</a></span>
+                        <span><a href="">사이트맵</a></span>
+                    </div>
+                    </div>
+                </div>
+                
+<!--                height:517px-->
+                <div id="gnb">
+<!--                   gnblist width:90%-->
+                   <ul class="gnblist" id="gnblist">
+                       <li>
+                            <p>출발</p>
+                            <ul class="subgnb">
+                                <li><a href="sub_gnb1-1.html">출발시간</a></li>
+                                <li><a href="">항공권예약</a></li>
+                                <li><a href="">출국절차</a></li>
+                                <li><a href="">빠른수속</a></li>
+                                <li><a href="">출국체크사항</a></li>
+                                <li><a href="">취항정보</a></li>
+                            </ul>
+                       </li>
+                       <li>
+                            <p>도착</p>
+                            <ul class="subgnb">
+                                <li><a href="">도착시간</a></li>
+                                <li><a href="">입국절차</a></li>
+                            </ul>
+                       </li>
+                       <li>
+                            <p>교통&middot;주차</p>
+                            <ul class="subgnb">
+                                <li><a href="">출발시간</a></li>
+                                <li><a href="">항공권예약</a></li>
+                                <li><a href="">출국절차</a></li>
+                                <li><a href="">빠른수속</a></li>
+                                <li><a href="">출국체크사항</a></li>
+                                <li><a href="">취항정보</a></li>
+                            </ul>
+                       </li>
+                       <li>
+                            <p>공항정보</p>
+                            <ul class="subgnb">
+                                <li><a href="">공항소개</a></li>
+                                <li><a href="">공항시설</a></li>
+                                <li><a href="">교통&middot;약자서비스</a></li>
+                            </ul>
+                       </li>
+                       <li>
+                            <p>고객센터</p>
+                            <ul class="subgnb">
+                                <li><a href="">공지사항</a></li>
+                                <li><a href="">이벤트정보</a></li>
+                                <li><a href="">FAQ</a></li>
+                                <li><a href="">전화번호안내</a></li>
+                                <li><a href="">유실물관리소</a></li>
+                                <li><a href="">고객의소리</a></li>
+                            </ul>
+                       </li>
+                   </ul>
+                    
+                </div>
+                
+<!--                height:50px-->
+                <div id="gnbbottom">
+                    <span><a href="">한국어</a></span>
+                    <span>	&#124;</span>
+                    <span><a href="">English</a></span>
+                </div>
+                
+            </div>            
+            </div>
+            
+<!--            100px*25px-->
+            <div class="site">
+                <form action="#">
+                    <fieldset>
+                        <select name="familysite" id="familysite" title="패밀리site" >
+                           <option value="" disabled selected>패밀리site</option>
+                            <option value="">제주국제공항</option>
+                            <option value="">김포국제공항</option>
+                            <option value="">김해국제공항</option>
+                        </select>
+                    </fieldset>
+                </form>
+            </div>
+                
+                <!--        100% opacity-->
+        <div id="modal">
+            <div id="modalpop">
+                <ul>
+                    <li>
+                        <dl>
+                            <dt><img src="images/modalMap.png" alt="airportmap"></dt>
+                            <dd class="only"><a href="">
+                            <p>제주공항</p>
+                            <p>한 눈에 보기</p></a></dd>
+                        </dl>                       
+                    </li>
+                    <li>
+                        <dl>
+                            <dt><img src="images/sidebar_reserve.png" alt="reserve"></dt>
+                            <dd><a href="">항공권 예약</a></dd>
+                        </dl>                       
+                    </li>
+                    <li>
+                        <dl>
+                            <dt><img src="images/sidebar_trip.png" alt="trip info"></dt>
+                            <dd><a href="">여행정보</a></dd>
+                        </dl>                       
+                    </li>
+                </ul>
+            </div>
+            <a href="#" id="modalOpen" role="button"><i class="fas fa-plus"></i></a>
+        </div>
+        </header>
+        </div>
+        
+        
+        
+        <div id="main">
+           
+<!--           height:600px-->
+            <div id="container1">
+               
+<!--               100%-->
+                <div id="slide">
+                   <form action="#" >
+                       <fieldset>
+                          <div class="nxtbtn">
+                          <img src="images/slidepreicon.png" alt="preview" id="prevBtn">
+                          <img src="images/slidenexticon.png" alt="next" id="nextBtn">
+                           </div>
+                           <input type="radio" id="slide1" name="slide" class="skip" >
+                           <input type="radio" id="slide2" name="slide" class="skip">
+                           <input type="radio" id="slide3" name="slide" class="skip" checked>
+                           
+                           <ul class="slidebg">
+                               <li class="slide1">
+                                  <div class="slidescript">
+                                   <h3>JEJU Airport</h3>
+                                   <div>
+                                       중국, 일본, 동남아를 연결하는 중요한 지리적 위치의 <span>제주국제공항</span>
+                                   </div>
+                                   </div>
+                               </li>
+                               <li class="slide2">
+                                   <div class="slidescript">
+                                   <h3>JEJU Airport</h3>
+                                   <p class="slide2_1">다시 찾고 싶은</p>
+                                   <p class="slide2_2">제주 국제 공항</p>
+                                   <p class="slide2_3">정성이 담긴 최상의 서비스로 고객 여러분을 맞이하겠습니다.</p>    
+                                   </div>                              
+                               </li>
+                               <li class="slide3">
+                                   <div class="slidescript">
+                                   <h3>JEJU Airport</h3>
+                                   <div>여행의 설렘을 <span>제주국제공항</span>과 함께
+                                   </div>
+                                   </div>
+                               </li>
+                           </ul>
+                           
+                           <div class="slidebtn">
+                           <label for="slide1"></label>
+                           <label for="slide2"></label>
+                           <label for="slide3"></label>
+                           </div>
+                       </fieldset>
+                   </form>
+                    
+                  
+                </div>
+                   
+<!--                  height:200px -->
+                <div id="search_DA">
+                    <form action="#">
+                    <fieldset>
+                      <ul>
+                          <li>
+                              <input type="radio" id="departure" name="searchDA" checked class="skip">
+                              <span>          
+                               <label for="departure"><i class="fas fa-plane-departure"></i>출발</label>
+                              </span>
+                          </li>
+                          <li>
+                              <input type="radio" id="arrival" name="searchDA" class="skip">
+                              <span>
+                              <label for="arrival"><i class="fas fa-plane-arrival"></i>도착</label>  </span>      
+                          </li>
+                      </ul>
+             
+                        <p class="main_search">
+                            <input type="text" placeholder="항공편명/목적지를 입력하세요.">
+                            <a href=""><i class="fas fa-search"></i></a>   
+                        </p>
+                        
+                        <div class="DA_more" id="DAopen">운항정보 더보기 <i class="fas fa-caret-down"></i></div>
+                    </fieldset>
+                    </form>
+<!--                       height:200px display:hidden-->
+                          
+<!--                            </div>-->
+                </div>
+                    
+            </div>
+<!--        //#container1-->
+            <div id="DA_more">
+                           <table>
+                               <caption>실시간 운항정보</caption>
+                               <thead>
+                                   <tr>
+                                       <th>시간</th>
+                                       <th>편명</th>
+                                       <th>도착지</th>
+                                       <th>현황</th>
+                                       <th>게이트</th>
+                                   </tr>
+                               </thead>
+                               <tbody>
+                                   <tr>
+                                       <td>14:00</td>
+                                       <td>7C1384</td>
+                                       <td>오사카/간사이</td>
+                                       <td>지연</td>
+                                       <td>10</td>
+                                   </tr>
+                                   <tr>
+                                       <td>14:00</td>
+                                       <td>KE1115</td>
+                                       <td>부산/김해</td>
+                                       <td>탑승중</td>
+                                       <td>9</td>
+                                   </tr>
+                                   <tr>
+                                       <td>14:00</td>
+                                       <td>7C1384</td>
+                                       <td>오사카/간사이</td>
+                                       <td>지연</td>
+                                       <td>10</td>
+                                   </tr>
+                                   <tr>
+                                       <td>14:00</td>
+                                       <td>KE1115</td>
+                                       <td>부산/김해</td>
+                                       <td>탑승중</td>
+                                       <td>9</td>
+                                   </tr>
+<!--
+                                   <tr>
+                                       <td>14:00</td>
+                                       <td>KE1115</td>
+                                       <td>부산/김해</td>
+                                       <td>탑승중</td>
+                                       <td>9</td>
+                                   </tr>
+-->
+                               </tbody>
+                           </table>
+                           
+                           <span class="moreinfo"><a href="sub_gnb1-1.html"><i class="fas fa-plus"></i></a></span>
+                           </div>
+                           
+           <div id="container2">
+           
+<!--              70%*200px-->              
+               <div id="content1">
+                   <p>
+                       <img src="images/airplane_airportguide_icon.png" alt="guide">
+                   </p>
+                   <h2>공항 이용 가이드</h2>
+                   <div class="guidememo">
+                       <span><a href="">출발</a></span>
+                       <span>	&#124;</span>
+                       <span><a href="">도착</a></span>
+                       <span>	&#124;</span>
+                       <span><a href="">주요시설</a></span>
+                   </div>
+               </div>
+               
+<!--              70%*200px-->              
+               <div id="content2">
+                  <a href="">
+                   <p>
+                       <img src="images/phonenumber_icon.png" alt="telephone">
+                   </p>
+                   <h2>연락처 안내</h2>
+                   <div>
+                       편안한 공항 이용을 위하 기관 및 시설의<br>
+                       전화번호를 알려드립니다.
+                   </div>
+                   </a>
+               </div>
+               
+<!--              70%*200px-->              
+               <div id="content3">
+                   <a href="">
+                   <p>
+                       <img src="images/sign_icon.png" alt="sign map">
+                   </p>
+                   <h2>오시는 길</h2>
+                   <div>
+                       출발지에서 공항까지 오시는 가장 빠르고 <br>
+                        편리한 방법을 알려드립니다.
+                   </div>
+                   </a>
+               </div>
+           </div>            
+            
+
+        </div>
+<!--    //#container -->        
+        
+        
+        
+        <footer>
+            
+            <div class="iconwrap">
+                <span>
+                    <a href="http://www.airportblog.co.kr/"><i class="fab fa-blogger-b"></i></a>
+                </span>
+                <span>
+                    <a href="https://www.facebook.com/airport.korea"><i class="fab fa-facebook-f"></i></a>
+                </span>
+                <span>
+                    <a href="https://www.instagram.com/airport.korea/"><i class="fab fa-instagram"></i></a>
+                </span>
+            </div>
+            <div class="footerwrap">
+                <ul>
+                    <li><a href="">홈페이지 이용안내</a></li>
+                    <li><a href="">서비스 제휴안내</a></li>
+                    <li><a href="">개인정보처리방침</a></li>
+                    <li><a href="">영상정보처리기기 운영관리방침</a></li>
+                    <li><a href="">이메일무답수집거부</a></li>
+                    <li><a href="">고객서비스현장</a></li>
+                </ul>
+            </div>
+            <div class="footerBottom">
+                <ul>
+                    <li><address>63115 제주특별자치도 제주시 공항로 2</address></li>
+                    <li>[ 전화번호 1661-2626 ]</li>
+                    <li>말로 하는 전화 1636+'공항'</li>
+                    <li>Copyright&copy; 2016 KAC.All Rights Reserved.</li>
+                </ul>
+            </div>
+        </footer>
+
+            
+    </div>
+<!--//wrapper-->
+   <script type="text/javascript" src="jeju.js"></script>
+   <script type="text/javascript" src="index.js"></script>
+</body>
+</html>

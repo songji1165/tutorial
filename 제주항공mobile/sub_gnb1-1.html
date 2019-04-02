@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>제주국제공항</title>
+        <link rel="stylesheet" href="sub_gnb1-1_main.css">
+        <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,500,700,900&amp;subset=korean" rel="stylesheet">
+   	 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+</head>
+<body>
+    <div id="wrapper">
+              
+<!--        100% * 67px-->
+       <div id="headerWrap">
+        <header>
+           
+<!--           70px*50px-->
+            <h1 class="logo">
+                <a href="index.html"><img src="images/logo.jpg" alt="logo"></a>
+            </h1>
+            
+               
+<!--                 icon 40px*40px   -->
+                 <button class="gnbicon" id="navopenbtn"><span></span></button>
+<!--                 <a href="" class="gnbicon" id="navopenbtn"><span></span></a>-->
+<!--                 <a href="#gnbpop" class="gnbicon"><span></span></a>-->
+               
+                       
+                
+                
+            <div id="gnbpopWrap">   
+<!--            width:90%-->
+             <div id="gnbpop">
+             
+<!--                height:100px-->
+                <div id="gnbtop">
+                <div id="gnbtop_inside">
+                    <div class="gnbtop_T">
+                        <span>
+                            <a href=""><img src="images/sidebar_map.png" alt="mapicon" class="gnbTopicon">공항지도</a>
+                        </span>
+                        <span>
+                            <a href=""><img src="images/gnb_searchicon.png" alt="searchicon" class="gnbTopicon">검색</a>
+                        </span>
+                        
+                        <a href="" onclick="navClose()"><span></span></a>
+                    </div>
+                    
+                    <div class="gnbtop_B">
+                        <span><a href="">로그인</a></span>
+                        <span><a href="">회원가입</a></span>
+                        <span><a href="">사이트맵</a></span>
+                    </div>
+                    </div>
+                </div>
+                
+<!--                height:517px-->
+                <div id="gnb">
+<!--                   gnblist width:90%-->
+                   <ul class="gnblist" id="gnblist">
+                       <li>
+                            <p>출발</p>
+                            <ul class="subgnb">
+                                <li><a href="sub_gnb1-1.html">출발시간</a></li>
+                                <li><a href="">항공권예약</a></li>
+                                <li><a href="">출국절차</a></li>
+                                <li><a href="">빠른수속</a></li>
+                                <li><a href="">출국체크사항</a></li>
+                                <li><a href="">취항정보</a></li>
+                            </ul>
+                       </li>
+                       <li>
+                            <p>도착</p>
+                            <ul class="subgnb">
+                                <li><a href="">도착시간</a></li>
+                                <li><a href="">입국절차</a></li>
+                            </ul>
+                       </li>
+                       <li>
+                            <p>교통&middot;주차</p>
+                            <ul class="subgnb">
+                                <li><a href="">출발시간</a></li>
+                                <li><a href="">항공권예약</a></li>
+                                <li><a href="">출국절차</a></li>
+                                <li><a href="">빠른수속</a></li>
+                                <li><a href="">출국체크사항</a></li>
+                                <li><a href="">취항정보</a></li>
+                            </ul>
+                       </li>
+                       <li>
+                            <p>공항정보</p>
+                            <ul class="subgnb">
+                                <li><a href="">공항소개</a></li>
+                                <li><a href="">공하시설</a></li>
+                                <li><a href="">교통&middot;약자서비스</a></li>
+                            </ul>
+                       </li>
+                       <li>
+                            <p>고객센터</p>
+                            <ul class="subgnb">
+                                <li><a href="">공지사항</a></li>
+                                <li><a href="">이벤트정보</a></li>
+                                <li><a href="">FAQ</a></li>
+                                <li><a href="">전화번호안내</a></li>
+                                <li><a href="">유실물관리소</a></li>
+                                <li><a href="">고객의소리</a></li>
+                            </ul>
+                       </li>
+                   </ul>
+                    
+                </div>
+                
+<!--                height:50px-->
+                <div id="gnbbottom">
+                    <span><a href="">한국어</a></span>
+                    <span>	&#124;</span>
+                    <span><a href="">English</a></span>
+                </div>
+                
+            </div>            
+            </div>
+            
+<!--            100px*25px-->
+            <div class="site">
+                <form action="#">
+                    <fieldset>
+                        <select name="familysite" id="familysite" title="패밀리site" >
+                           <option value="" disabled selected>패밀리site</option>
+                            <option value="">제주국제공항</option>
+                            <option value="">김포국제공항</option>
+                            <option value="">김해국제공항</option>
+                        </select>
+                    </fieldset>
+                </form>
+            </div>
+                
+                <!--        100% opacity-->
+        <div id="modal">
+            <a href="#" id="modalOpen" role="button"><i class="fas fa-plus"></i></a>
+            <div id="modalpop">
+                <ul>
+                    <li>
+                        <dl>
+                            <dt><img src="images/modalMap.png" alt="airportmap"></dt>
+                            <dd class="only"><a href="">
+                            <p>제주공항</p>
+                            <p>한 눈에 보기</p></a></dd>
+                        </dl>                       
+                    </li>
+                    <li>
+                        <dl>
+                            <dt><img src="images/sidebar_reserve.png" alt="reserve"></dt>
+                            <dd><a href="">항공권 예약</a></dd>
+                        </dl>                       
+                    </li>
+                    <li>
+                        <dl>
+                            <dt><img src="images/sidebar_trip.png" alt="trip info"></dt>
+                            <dd><a href="">여행정보</a></dd>
+                        </dl>                       
+                    </li>
+                </ul>
+            </div>
+        </div>
+        </header>
+        </div>
+        
+        <div id="main">
+            <div id="maintitlewrap">
+               <div class="maintitle">
+                <h2>출발시간</h2>
+                <p>항공사별 도시별 출발정보를 안내합니다.</p>
+                <p>
+                아래 운항스케줄은 항공사 사정으로 변경될 수 있으니 
+                정확한 정보는해당 항공사/기관/시설에 확인하여 주시기 바랍니다.
+                </p>
+                </div>
+                </div>
+<!--            </div>-->
+            
+
+            <div id="article">
+                <form action="#">
+                    <fieldset>
+                        <ul class="horizen">
+                            <li class="airplaneTime">
+                                <input type="radio" id="ariplane" name="time" class="skip" checked>
+                                <label for="ariplane">여객 출발 시간표</label>
+                                
+<!--                        width:80% -->
+                                <div class="timewrap time1">
+                                    <table border="1">
+                                        <caption>여객출발시간표검색</caption>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                <input type="date" value="2019-02-21" id="date" max="2019-02-28" min="2019-02-01"> 
+                                                </td>
+                                                <td>
+                                                 <select name="from" id="timeS" title="시작 시간선택">
+                                                     <option value="timeS">00:00</option>
+                                                     <option value="timeS">01:00</option>
+                                                     <option value="timeS">02:00</option>
+                                                     <option value="timeS">03:00</option>
+                                                     <option value="timeS">04:00</option>
+                                                     <option value="timeS">05:00</option>
+                                                     <option value="timeS">06:00</option>
+                                                     <option value="timeS">07:00</option>
+                                                     <option value="timeS">08:00</option>
+                                                     <option value="timeS">09:00</option>
+                                                     <option value="timeS">10:00</option>
+                                                     <option value="timeS">11:00</option>
+                                                     <option value="timeS">12:00</option>
+                                                     <option value="timeS">13:00</option>
+                                                     <option value="timeS">14:00</option>
+                                                     <option value="timeS">15:00</option>
+                                                     <option value="timeS">16:00</option>
+                                                     <option value="timeS">17:00</option>
+                                                     <option value="timeS">18:00</option>
+                                                     <option value="timeS">19:00</option>
+                                                     <option value="timeS">20:00</option>
+                                                     <option value="timeS">21:00</option>
+                                                     <option value="timeS">22:00</option>
+                                                     <option value="timeS">23:00</option>
+                                                 </select>   
+                                                </td>
+                                                <td>~</td>
+                                                <td>
+                                                    <select name="to" id="timeL" title="종료 시간선택">
+                                                        <option value="timeL">00:59</option>
+                                                        <option value="timeL">01:59</option>
+                                                        <option value="timeL">02:59</option>
+                                                        <option value="timeL">03:59</option>
+                                                        <option value="timeL">04:59</option>
+                                                        <option value="timeL">05:59</option>
+                                                        <option value="timeL">06:59</option>
+                                                        <option value="timeL">07:59</option>
+                                                        <option value="timeL">08:59</option>
+                                                        <option value="timeL">09:59</option>
+                                                        <option value="timeL">10:59</option>
+                                                        <option value="timeL">11:59</option>
+                                                        <option value="timeL">12:59</option>
+                                                        <option value="timeL">13:59</option>
+                                                        <option value="timeL">14:59</option>
+                                                        <option value="timeL">15:59</option>
+                                                        <option value="timeL">16:59</option>
+                                                        <option value="timeL">17:59</option>
+                                                        <option value="timeL">18:59</option>
+                                                        <option value="timeL">19:59</option>
+                                                        <option value="timeL">20:59</option>
+                                                        <option value="timeL">21:59</option>
+                                                        <option value="timeL">22:59</option>
+                                                        <option value="timeL">23:59</option>
+                                                        
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            
+                                            <tr>
+                                                <td>
+                                                <select name="destination" id="destination" title="목적지 선택">
+                                                    <option value="" disabled selected>
+                                                        목적지 선택
+                                                    </option>
+                                                    <option value="GMP">서울/김포	</option>
+													<option value="PUS" >부산/김해	</option>
+													<option value="CJU" >제주	</option>
+													<option value="TAE" >대구	</option>
+													<option value="USN" >울산	</option>
+													<option value="CJJ" >청주	</option>
+													<option value="MWX" >무안	</option>
+													<option value="KWJ" >광주	</option>
+													<option value="RSU" >여수	</option>
+													<option value="KPO" >포항	</option>
+													<option value="YNY" >양양	</option>
+													<option value="HIN" >사천	</option>
+													<option value="KUV" >군산	</option>
+													<option value="WJU" >횡성/원주	</option>
+                           
+                                                </select>
+                                                
+                                                </td>
+                                                <td colspan="3">
+                                                <select id="airline" name="airline" title="항공사 선택">
+                                                <option value="" disabled selected>항공사 선택</option>
+	                                            <option value="KE" >대한항공</option>
+												
+												<option value="GJ" >룽에어</option>
+												
+												<option value="JD" >북경수도항공</option>
+												
+												<option value="OZ" >아시아나항공</option>
+												
+												<option value="BX" >에어부산</option>
+												
+												<option value="D7" >에어아시아엑스</option>
+												
+												<option value="KJ" >에어인천</option>
+												
+												<option value="3P" >에어필립</option>
+												
+												<option value="BK" >오케이항공</option>
+												
+												<option value="FE" >원동항공</option>
+												
+												<option value="ZE" >이스타항공</option>
+												
+												<option value="7C" >제주항공</option>
+												
+												<option value="HO" >중국길상항공(준야오항공)</option>
+												
+												<option value="CZ" >중국남방항공</option>
+												
+												<option value="MU" >중국동방항공</option>
+												
+												<option value="LJ" >진에어</option>
+												
+												<option value="GS" >천진항공</option>
+												
+												<option value="9C" >춘추항공</option>
+												
+												<option value="KA" >케세이드래곤항공</option>
+												
+												<option value="KW" >코리아익스프레스에어</option>
+												
+												<option value="IT" >타이거에어 타이완</option>
+												
+												<option value="TW" >티웨이항공</option>
+												
+												<option value="UO" >홍콩익스프레스</option>
+												
+												
+												</select>
+
+												
+                                                </td>
+                                            </tr>
+                                            
+                                            <tr>
+                                                <td colspan="4" class="tabelsearch">
+                                                    <input type="text" title="편명입력" maxlength=8>
+                                                    <button>
+                                                        <img src="images/gnb_searchicon_table.png" alt="submit">
+                                                    </button>
+                                                </td>
+                                                
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    
+<!--                             height:400px, hover시 색만 병경, overflow :scroll-->
+                                    <div class="contents">
+                                        <ul>
+                                            <li>
+                                                <dl>
+                                                    <dt>16:00</dt>
+                                                    <dd>16:00</dd>
+                                                </dl>
+                                                <dl>
+                                                    <dt>김해</dt>
+                                                    <dd>아시아나 항공/OZ1745</dd>
+                                                </dl>
+                                                <p class="state ing">
+                                                    탑승중
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <dl>
+                                                    <dt>16:00</dt>
+                                                    <dd>16:00</dd>
+                                                </dl>
+                                                <dl>
+                                                    <dt>김해</dt>
+                                                    <dd>아시아나 항공/OZ1745</dd>
+                                                </dl>
+                                                <p class="state end">
+                                                    탑승마감
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <dl>
+                                                    <dt>16:00</dt>
+                                                    <dd>16:00</dd>
+                                                </dl>
+                                                <dl>
+                                                    <dt>김해</dt>
+                                                    <dd>아시아나 항공/OZ1745</dd>
+                                                </dl>
+                                                <p class="state arrive">
+                                                    출발
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <dl>
+                                                    <dt>16:00</dt>
+                                                    <dd class="time ">15:00</dd>
+                                                </dl>
+                                                <dl>
+                                                    <dt>김해</dt>
+                                                    <dd>아시아나 항공/OZ1745</dd>
+                                                </dl>
+                                                <p class="state delay">
+                                                    지연
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <dl>
+                                                    <dt>16:00</dt>
+                                                    <dd>16:00</dd>
+                                                </dl>
+                                                <dl>
+                                                    <dt>김해</dt>
+                                                    <dd>아시아나 항공/OZ1745</dd>
+                                                </dl>
+                                                <p class="state open">
+                                                    체크인오픈
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <dl>
+                                                    <dt>16:00</dt>
+                                                    <dd class="time ">15:00</dd>
+                                                </dl>
+                                                <dl>
+                                                    <dt>김해</dt>
+                                                    <dd>아시아나 항공/OZ1745</dd>
+                                                </dl>
+                                                <p class="state delay">
+                                                    지연
+                                                </p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+<!--                            //airplaneTime-->
+                           
+                           
+                           
+                            <li class="regular">
+                               <input type="radio" id="perio" name="time" class="skip">
+                                <label for="perio" class="perio">여객 출발 정기 운항표</label>
+                       
+<!--                            width:80% -->
+                                <div class="timewrap time2">
+                                    <table border="1">
+                                        <caption>여객 출발 정기 운항표</caption>
+                                        <tbody>
+                                            <tr>
+                                                <td class="first">운항일 선택</td>
+                                                <td>
+                                                    <input type="date" value="2019-02-21" id="date" max="2019-02-28" min="2019-02-01"> 
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                  <select name="destination" id="destination" title="목적지 선택">
+                                                    <option value="" disabled selected>
+                                                        목적지 선택
+                                                    </option>
+                                                    <option value="GMP">서울/김포	</option>
+													<option value="PUS" >부산/김해	</option>
+													<option value="CJU" >제주	</option>
+													<option value="TAE" >대구	</option>
+													<option value="USN" >울산	</option>
+													<option value="CJJ" >청주	</option>
+													<option value="MWX" >무안	</option>
+													<option value="KWJ" >광주	</option>
+													<option value="RSU" >여수	</option>
+													<option value="KPO" >포항	</option>
+													<option value="YNY" >양양	</option>
+													<option value="HIN" >사천	</option>
+													<option value="KUV" >군산	</option>
+													<option value="WJU" >횡성/원주	</option>
+                           
+                                                </select>
+                                                
+                                                </td>
+                                                <td colspan="3">
+                                                <select id="airline" name="airline" title="항공사 선택">
+                                                <option value="" disabled selected>항공사 선택</option>
+	                                            <option value="KE" >대한항공</option>
+												
+												<option value="GJ" >룽에어</option>
+												
+												<option value="JD" >북경수도항공</option>
+												
+												<option value="OZ" >아시아나항공</option>
+												
+												<option value="BX" >에어부산</option>
+												
+												<option value="D7" >에어아시아엑스</option>
+												
+												<option value="KJ" >에어인천</option>
+												
+												<option value="3P" >에어필립</option>
+												
+												<option value="BK" >오케이항공</option>
+												
+												<option value="FE" >원동항공</option>
+												
+												<option value="ZE" >이스타항공</option>
+												
+												<option value="7C" >제주항공</option>
+												
+												<option value="HO" >중국길상항공(준야오항공)</option>
+												
+												<option value="CZ" >중국남방항공</option>
+												
+												<option value="MU" >중국동방항공</option>
+												
+												<option value="LJ" >진에어</option>
+												
+												<option value="GS" >천진항공</option>
+												
+												<option value="9C" >춘추항공</option>
+												
+												<option value="KA" >케세이드래곤항공</option>
+												
+												<option value="KW" >코리아익스프레스에어</option>
+												
+												<option value="IT" >타이거에어 타이완</option>
+												
+												<option value="TW" >티웨이항공</option>
+												
+												<option value="UO" >홍콩익스프레스</option>
+												
+												
+												</select>
+
+												
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2" class="tabelsearch">
+                                                    <input type="text" title="편명입력" maxlength=8>
+                                                
+                                                    <button>
+                                                        <img src="images/gnb_searchicon_table.png" alt="submit">
+                                                    </button>
+                                                    
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    
+ <!--            height:400px, overflow:scroll, 반응형 table           -->
+<!--             http://moonhouse.co.kr/xe/html/406541 반응형 테이블 참고-->
+<!--                                   checkcicle은 after 사용-->
+                                    <div class="contents">
+                                    <table id="schedule">
+                                        <caption>schedule</caption>
+                                        <tbody>
+										<tr>
+											<td class="center"><strong>KE017</strong></td>
+											<td class="center">
+												<a href="https://kr.koreanair.com/korea/ko.html" target="_blank" title="새창">
+													<span class="font16">
+														대한항공</span>
+												</a>
+											</td>
+											<td class="center">07:25</td>
+											<td class="center">김포</td>
+											<td class="center" data-title="월"></td>
+											<td class="center" data-title="화"></td>
+											<td class="center" data-title="수"></td>
+											<td class="center" data-title="목"></td>
+											<td class="center" data-title="금">
+													<span class="schedule" title='금요일 운항'>운항</span>
+												</td>
+											<td class="center" data-title="토"></td>
+											<td class="center" data-title="일"></td>
+											<td class="center">2019.02.22~2019.02.22</td>
+										</tr>
+									
+										<tr>
+											<td class="center"><strong>7C1100</strong></td>
+											<td class="center">
+												<a href="http://www.airbusan.net" target="_blank" title="새창">
+													<span class="font16">
+														에어부산</span>
+												</a>
+											</td>
+											<td class="center">07:10</td>
+											<td class="center">부산</td>
+											<td class="center" data-title="월"></td>
+											<td class="center" data-title="화"></td>
+											<td class="center" data-title="수"></td>
+											<td class="center" data-title="목"></td>
+											<td class="center" data-title="금"></td>
+											<td class="center" data-title="토">
+													<span class="schedule weekend" title='토요일 운항'>운항</span>
+												</td>
+											<td class="center" data-title="일"></td>
+											<td class="center">2019.02.23~2019.03.02</td>
+										</tr>
+                                        <tr>
+											<td class="center"><strong>7C1102</strong></td>
+											<td class="center">
+												<a href="http://www.jejuair.net" target="_blank" title="새창">
+													<span class="font16">
+														제주항공</span>
+												</a>
+											</td>
+											<td class="center">08:10</td>
+											<td class="center">김포</td>
+											<td class="center" data-title="월">
+													<span class="schedule" title='월요일 운항'>운항</span>
+												</td>
+											<td class="center" data-title="화">
+													<span class="schedule" title='화요일 운항'>운항</span>
+												</td>
+											<td class="center" data-title="수">
+													<span class="schedule" title='수요일 운항'>운항</span>
+												</td>
+											<td class="center" data-title="목">
+													<span class="schedule" title='목요일 운항'>운항</span>
+												</td>
+											<td class="center" data-title="금">
+													<span class="schedule" title='금요일 운항'>운항</span>
+												</td>
+											<td class="center" data-title="토">
+													<span class="schedule weekend" title='토요일 운항'>운항</span>
+												</td>
+											<td class="center" data-title="일">
+													<span class="schedule weekend" title='일요일 운항'>운항</span>
+												</td>
+											<td class="center">2018.10.28~2019.03.30</td>
+										</tr>
+                                        <tr>
+											<td class="center"><strong>7C1100</strong></td>
+											<td class="center">
+												<a href="http://www.airbusan.net" target="_blank" title="새창">
+													<span class="font16">
+														에어부산</span>
+												</a>
+											</td>
+											<td class="center">07:10</td>
+											<td class="center">부산</td>
+											<td class="center" data-title="월"></td>
+											<td class="center" data-title="화"></td>
+											<td class="center" data-title="수"></td>
+											<td class="center" data-title="목"></td>
+											<td class="center" data-title="금"></td>
+											<td class="center" data-title="토">
+													<span class="schedule weekend" title='토요일 운항'>운항</span>
+												</td>
+											<td class="center" data-title="일"></td>
+											<td class="center">2019.02.23~2019.03.02</td>
+										</tr>
+
+                                        </tbody>
+                                    </table>
+                                    </div>
+                                </div>
+                            </li>
+<!--                            //luggageTime-->
+
+                        </ul>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+<!--        //#main-->
+        
+        <footer>
+            
+            <div class="iconwrap">
+                <span>
+                    <a href="http://www.airportblog.co.kr/"><i class="fab fa-blogger-b"></i></a>
+                </span>
+                <span>
+                    <a href="https://www.facebook.com/airport.korea"><i class="fab fa-facebook-f"></i></a>
+                </span>
+                <span>
+                    <a href="https://www.instagram.com/airport.korea/"><i class="fab fa-instagram"></i></a>
+                </span>
+            </div>
+            <div class="footerwrap">
+                <ul>
+                    <li><a href="">홈페이지 이용안내</a></li>
+                    <li><a href="">서비스 제휴안내</a></li>
+                    <li><a href="">개인정보처리방침</a></li>
+                    <li><a href="">영상정보처리기기 운영관리방침</a></li>
+                    <li><a href="">이메일무답수집거부</a></li>
+                    <li><a href="">고객서비스현장</a></li>
+                </ul>
+            </div>
+            <div class="footerBottom">
+                <ul>
+                    <li><address>63115 제주특별자치도 제주시 공항로 2</address></li>
+                    <li>[ 전화번호 1661-2626 ]</li>
+                    <li>말로 하는 전화 1636+'공항'</li>
+                    <li>Copyright&copy; 2016 KAC.All Rights Reserved.</li>
+                </ul>
+            </div>
+        </footer>
+        
+    </div>
+<!--    //#wrapper-->
+<script type="text/javascript" src="jeju.js"></script>
+</body>
+</html>
